@@ -524,8 +524,8 @@
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/VirgilClyne/iRingo/",
 			"icons": [
-				"https://www.apple.com.cn/v/maps/d/images/overview/intro_icon__dfyvjc1ohbcm_small_2x.jpg",
-				"https://www.apple.com.cn/v/maps/d/images/overview/intro_icon__dfyvjc1ohbcm_small_2x.jpg"
+				"https://developer.apple.com/assets/elements/icons/maps/maps-128x128.png",
+				"https://developer.apple.com/assets/elements/icons/maps/maps-128x128.png"
 			]
 		},
 		{
@@ -550,8 +550,8 @@
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/VirgilClyne/iRingo/",
 			"icons": [
-				"https://developer.apple.com/assets/elements/icons/apple-intelligence/apple-intelligence-96x96_2x.png",
-				"https://developer.apple.com/assets/elements/icons/apple-intelligence/apple-intelligence-96x96_2x.png"
+				"https://developer.apple.com/assets/elements/icons/apple-intelligence/apple-intelligence-128x128.png",
+				"https://developer.apple.com/assets/elements/icons/apple-intelligence/apple-intelligence-128x128.png"
 			]
 		},
 		{
@@ -756,8 +756,8 @@
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/VirgilClyne/iRingo/",
 			"icons": [
-				"https://upload.wikimedia.org/wikipedia/commons/d/de/Logo_Apple_Siri_iOS_2024.svg",
-				"https://upload.wikimedia.org/wikipedia/commons/d/de/Logo_Apple_Siri_iOS_2024.svg"
+				"https://developer.apple.com/assets/elements/icons/siri/siri-128x128.png",
+				"https://developer.apple.com/assets/elements/icons/siri/siri-128x128.png"
 			]
 		},
 		{
@@ -1634,8 +1634,8 @@
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/VirgilClyne/iRingo/",
 			"icons": [
-				"https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/9c/f7/8a/9cf78ad4-5443-acc0-3b36-f13d2ad7d64c/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/108x0w.webp",
-				"https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/9c/f7/8a/9cf78ad4-5443-acc0-3b36-f13d2ad7d64c/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/108x0w.webp"
+				"https://developer.apple.com/assets/elements/icons/apple-tv/apple-tv-128x128.png",
+				"https://developer.apple.com/assets/elements/icons/apple-tv/apple-tv-128x128.png"
 			]
 		},
 		{
@@ -1725,8 +1725,8 @@
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/VirgilClyne/iRingo/",
 			"icons": [
-				"https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Apple_News.png",
-				"https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_News.png"
+				"https://developer.apple.com/assets/elements/icons/news/news-128x128.png",
+				"https://developer.apple.com/assets/elements/icons/news/news-128x128.png"
 			]
 		},
 		{
@@ -1823,8 +1823,8 @@
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/VirgilClyne/iRingo/",
 			"icons": [
-				"https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/TestFlight_2.png",
-				"https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TestFlight_2.png"
+				"https://developer.apple.com/assets/elements/icons/testflight/testflight-128x128.png",
+				"https://developer.apple.com/assets/elements/icons/testflight/testflight-128x128.png"
 			]
 		},
 		{
@@ -1921,8 +1921,8 @@
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/VirgilClyne/iRingo/",
 			"icons": [
-				"https://is4-ssl.mzstatic.com/image/thumb/Purple122/v4/4c/2f/15/4c2f15f5-3913-b073-2215-34f030e458f2/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/108x0w.webp",
-				"https://is4-ssl.mzstatic.com/image/thumb/Purple122/v4/4c/2f/15/4c2f15f5-3913-b073-2215-34f030e458f2/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/108x0w.webp"
+				"https://developer.apple.com/assets/elements/icons/apple-watch-app/apple-watch-app-128x128.png",
+				"https://developer.apple.com/assets/elements/icons/apple-watch-app/apple-watch-app-128x128.png"
 			]
 		}
 	]
