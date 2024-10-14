@@ -8,9 +8,9 @@
 	"apps": [
 		{
 			"id": "iRingo.WeatherKit.beta",
-			"name": "🌤 天气服务 β",
+			"name": "🌤 WeatherKit β",
 			"descs_html": [
-				"请参照<a href=\"https://github.com/NSRingo/WeatherKit/wiki\">🌤 天气服务</a>的使用说明进行配置",
+				"请参照<a href=\"https://NSRingo.github.io/guide/Weather/weather-kit\">🌤 WeatherKit</a>的使用说明进行配置",
 				"填写完成后别忘点击此页面底端右下角的\"保存\"。"
 			],
 			"keys": ["@iRingo.WeatherKit.Settings", "@iRingo.WeatherKit.Caches"],
@@ -185,9 +185,9 @@
 		},
 		{
 			"id": "iRingo.Location.beta",
-			"name": "📍 定位服务 β",
+			"name": "📍 定位 β",
 			"descs_html": [
-				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/📍-定位服务\">📍 定位服务</a>的使用说明进行配置",
+				"请参照<a href=\"https://NSRingo.github.io/guide/GeoServices/location\">📍 定位</a>的使用说明进行配置",
 				"影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"
 			],
 			"keys": ["@iRingo.Location.Settings", "@iRingo.Location.Caches"],
@@ -268,7 +268,7 @@
 			"id": "iRingo.Maps.beta",
 			"name": "🗺️ 地图 β",
 			"descs_html": [
-				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/🗺️-地图\">🗺️ 地图</a>的使用说明进行配置",
+				"请参照<a href=\"https://NSRingo.github.io/guide/GeoServices/maps\">🗺️ 地图</a>的使用说明进行配置",
 				"影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"
 			],
 			"keys": ["@iRingo.Maps.Settings", "@iRingo.Maps.Caches"],
@@ -521,7 +521,7 @@
 			"id": "iRingo.AppleIntelligence.beta",
 			"name": "🟥 Apple智能 β",
 			"descs_html": [
-				"请参照<a href=\"https://github.com/NSRingo/Siri/wiki/🟥-Apple智能与Siri\">🟥 Apple智能与Siri</a>的使用说明进行配置"
+				"请参照<a href=\"https://NSRingo.github.io/guide/Siri/apple-intelligence-and-siri\">🟥 Apple智能与Siri</a>的使用说明进行配置"
 			],
 			"keys": [
 				"@iRingo.AppleIntelligence.Settings",
@@ -547,7 +547,7 @@
 			"id": "iRingo.Siri.beta",
 			"name": "⭕ Siri β",
 			"descs_html": [
-				"请参照<a href=\"https://github.com/NSRingo/Siri/wiki/🟥-Apple智能与Siri\">🟥 Apple智能与Siri</a>的使用说明进行配置",
+				"请参照<a href=\"https://NSRingo.github.io/guide/Siri/apple-intelligence-and-siri\">🟥 Apple智能与Siri</a>的使用说明进行配置",
 				"影响功能范围不包括「Siri 请求」和「Siri 建议」等"
 			],
 			"keys": ["@iRingo.Siri.Settings", "@iRingo.Siri.Caches"],
@@ -750,7 +750,7 @@
 			"id": "iRingo.TV.beta",
 			"name": "📺 TV β",
 			"descs_html": [
-				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/📺-TV\">📺 TV</a>的使用说明进行配置",
+				"请参照<a href=\"https://NSRingo.github.io/guide/apple-tv\">📺 TV</a>的使用说明进行配置",
 				"自定义TV app的配置文件及各个栏目"
 			],
 			"keys": ["@iRingo.TV.Settings", "@iRingo.TV.Caches"],
@@ -1619,7 +1619,7 @@
 			"id": "iRingo.News.beta",
 			"name": "📰 News β",
 			"descs_html": [
-				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/📰-News\">📰 News</a>的使用说明进行配置",
+				"请参照<a href=\"https://NSRingo.github.io/guide/apple-news\">📰 News</a>的使用说明进行配置",
 				"影响功能范围……等"
 			],
 			"keys": ["@iRingo.News.Settings", "@iRingo.News.Caches"],
@@ -1707,7 +1707,7 @@
 			"id": "iRingo.TestFlight.beta",
 			"name": "✈ TestFlight β",
 			"descs_html": [
-				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/✈️-TestFlight\">✈️ TestFlight</a>的使用说明进行配置",
+				"请参照<a href=\"https://NSRingo.github.io/guide/test-flight\">✈️ TestFlight</a>的使用说明进行配置",
 				"影响功能范围……等"
 			],
 			"keys": ["@iRingo.TestFlight.Settings", "@iRingo.TestFlight.Caches"],
@@ -1802,7 +1802,7 @@
 			"id": "iRingo.Watch.beta",
 			"name": "⌚️ WATCH β",
 			"descs_html": [
-				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/⌚️-WATCH\">⌚️ WATCH</a>的使用说明进行配置",
+				"请参照<a href=\"https://NSRingo.github.io/guide/apple-watch\">⌚️ WATCH</a>的使用说明进行配置",
 				"影响功能范围WATCH上的“指南针”、“地图”、“News”等"
 			],
 			"keys": ["@iRingo.Watch.Settings", "@iRingo.Watch.Caches"],

@@ -10,7 +10,7 @@
 			"id": "iRingo.Weather",
 			"name": "🌤 天气",
 			"descs_html": [
-				"请参照<a href=\"https://github.com/NSRingo/Weather/wiki\">🌤 天气</a>的使用说明进行配置",
+				"请参照<a href=\"https://NSRingo.github.io/guide/Weather/weather\">🌤 天气</a>的使用说明进行配置",
 				"填写完成后别忘点击此页面底端右下角的\"保存\"。",
 				"查询速度:\"私有API+城市\" > \"私有API+观测站\" > \"公共API+观测站\"",
 				"定位精度:\"观测站\" > \"城市\""
@@ -140,9 +140,9 @@
 		},
 		{
 			"id": "iRingo.Location",
-			"name": "📍 定位服务",
+			"name": "📍 定位",
 			"descs_html": [
-				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/📍定位服务\">iRingo#定位服务</a>的使用说明进行配置",
+				"请参照<a href=\"https://NSRingo.github.io/guide/GeoServices/location\">📍 定位</a>的使用说明进行配置",
 				"影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"
 			],
 			"keys": [
@@ -415,7 +415,7 @@
 			"id": "iRingo.Siri",
 			"name": "⭕ Siri与搜索",
 			"descs_html": [
-				"请参照<a href=\"https://github.com/NSRingo/Siri/wiki/⭕-Siri与搜索\">⭕ Siri与搜索</a>的使用说明进行配置",
+				"请参照<a href=\"https://NSRingo.github.io/guide/Siri/siri-and-search\">⭕ Siri与搜索</a>的使用说明进行配置",
 				"影响功能范围包括但不限于「Siri建议」「来自APPLE的内容」「来自APPLE的建议」等"
 			],
 			"keys": [
@@ -597,7 +597,7 @@
 			"id": "iRingo.TV",
 			"name": "📺 TV",
 			"descs_html": [
-				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/📺TV-app\">iRingo#TV</a>的使用说明进行配置",
+				"请参照<a href=\"https://NSRingo.github.io/guide/apple-tv\">📺 TV</a>的使用说明进行配置",
 				"自定义TV app的配置文件及各个栏目"
 			],
 			"keys": [
@@ -1370,7 +1370,7 @@
 			"id": "iRingo.News",
 			"name": "📰 News",
 			"descs_html": [
-				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/📰News\">📰News</a>的使用说明进行配置",
+				"请参照<a href=\"https://NSRingo.github.io/guide/apple-news\">📰News</a>的使用说明进行配置",
 				"影响功能范围……等"
 			],
 			"keys": [
@@ -1450,7 +1450,7 @@
 			"id": "iRingo.TestFlight",
 			"name": "✈ TestFlight",
 			"descs_html": [
-				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/✈️TestFlight\">✈️TestFlight</a>的使用说明进行配置",
+				"请参照<a href=\"https://NSRingo.github.io/guide/test-flight\">✈️TestFlight</a>的使用说明进行配置",
 				"影响功能范围……等"
 			],
 			"keys": [
