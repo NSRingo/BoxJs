@@ -13,10 +13,7 @@
 				"请参照<a href=\"https://github.com/NSRingo/WeatherKit/wiki\">🌤 天气服务</a>的使用说明进行配置",
 				"填写完成后别忘点击此页面底端右下角的\"保存\"。"
 			],
-			"keys": [
-				"@iRingo.WeatherKit.Settings",
-				"@iRingo.WeatherKit.Caches"
-			],
+			"keys": ["@iRingo.WeatherKit.Settings", "@iRingo.WeatherKit.Caches"],
 			"settings": [
 				{
 					"id": "@iRingo.WeatherKit.Settings.Switch",
@@ -112,9 +109,7 @@
 				{
 					"id": "@iRingo.WeatherKit.Settings.AQI.Local.ReplaceScales",
 					"name": "[空气质量]需要修改的标准",
-					"val": [
-						"HJ6332012"
-					],
+					"val": ["HJ6332012"],
 					"type": "checkboxes",
 					"desc": "选中的空气质量标准会被替换。请注意各国监测的污染物种类可能有所不同，转换算法或API未必适合当地。",
 					"items": [
@@ -187,10 +182,7 @@
 				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/📍-定位服务\">📍 定位服务</a>的使用说明进行配置",
 				"影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"
 			],
-			"keys": [
-				"@iRingo.Location.Settings",
-				"@iRingo.Location.Caches"
-			],
+			"keys": ["@iRingo.Location.Settings", "@iRingo.Location.Caches"],
 			"settings": [
 				{
 					"id": "@iRingo.Location.Settings.Switch",
@@ -271,10 +263,7 @@
 				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/🗺️-地图\">🗺️ 地图</a>的使用说明进行配置",
 				"影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"
 			],
-			"keys": [
-				"@iRingo.Maps.Settings",
-				"@iRingo.Maps.Caches"
-			],
+			"keys": ["@iRingo.Maps.Settings", "@iRingo.Maps.Caches"],
 			"settings": [
 				{
 					"id": "@iRingo.Maps.Settings.Switch",
@@ -506,10 +495,7 @@
 				"请参照<a href=\"https://github.com/NSRingo/Siri/wiki/🟥-Apple智能与Siri\">🟥 Apple智能与Siri</a>的使用说明进行配置",
 				"影响功能范围包括「Siri 请求」和「Siri 建议」等"
 			],
-			"keys": [
-				"@iRingo.Siri.Settings",
-				"@iRingo.Siri.Caches"
-			],
+			"keys": ["@iRingo.Siri.Settings", "@iRingo.Siri.Caches"],
 			"settings": [
 				{
 					"id": "@iRingo.Siri.Settings.Switch",
@@ -651,36 +637,29 @@
 				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/📺-TV\">📺 TV</a>的使用说明进行配置",
 				"自定义TV app的配置文件及各个栏目"
 			],
-			"keys": [
-				"@iRingo.TV.Settings",
-				"@iRingo.TV.Caches"
-			],
+			"keys": ["@iRingo.TV.Settings", "@iRingo.TV.Caches"],
 			"settings": [
 				{
 					"id": "@iRingo.TV.Settings.Switch",
 					"name": "总功能开关",
-					"val": true,
 					"type": "boolean",
+					"val": true,
 					"desc": "是否启用此APP修改"
 				},
 				{
-					"id": "@iRingo.TV.Settings.Third-Party",
-					"name": "强制启用第三方影片库集成",
-					"val": false,
+					"id": "@iRingo.TV.Settings.ThirdParty",
+					"name": "启用第三方App与TV app关联功能",
 					"type": "boolean",
-					"desc": "是否将桌面版/macOS版/app版等平台的TV app转换至iPad版，以启用第三方影片库集成(如: Disney+,Prime Video等)"
+					"val": false,
+					"desc": "是否将桌面版/macOS版/app版等平台的TV app转换至iPad版，以启用第三方App与TV app关联功能(如: Disney+,Prime Video等)。"
 				},
 				{
 					"id": "@iRingo.TV.Settings.HLSUrl",
-					"name": "强制修改播放服务器地址",
-					"val": "play-edge.itunes.apple.com",
+					"name": "HTTP实时流(HLS)地址",
 					"type": "selects",
-					"desc": "因为密钥服务域名禁止MitM，修改密钥服务器地址可以分离HLS与Key的MitM域名，从而恢复如对DualSubs的双语字幕支持",
+					"val": "play-edge.itunes.apple.com",
 					"items": [
-						{
-							"key": "",
-							"label": "OFF(不修改)"
-						},
+						{ "key": "", "label": "OFF(不修改)" },
 						{
 							"key": "play.itunes.apple.com",
 							"label": "play.itunes.apple.com (不推荐，与播放服务域名重叠)"
@@ -689,19 +668,16 @@
 							"key": "play-edge.itunes.apple.com",
 							"label": "play-edge.itunes.apple.com (默认)"
 						}
-					]
+					],
+					"desc": "因为FPS服务域名禁止MitM，修改此地址可以分离HLS与FPS的域名，从而恢复对DualSubs的双语字幕支持。"
 				},
 				{
-					"id": "@iRingo.TV.Settings.ServerUrl",
-					"name": "强制修改密钥服务器地址",
-					"val": "play.itunes.apple.com",
+					"id": "@iRingo.TV.Settings.FPSUrl",
+					"name": "FairPlay流(FPS)地址",
 					"type": "selects",
-					"desc": "因为密钥服务域名禁止MitM，修改密钥服务器地址可以分离HLS与Key的MitM域名，从而恢复如对DualSubs的双语字幕支持",
+					"val": "play.itunes.apple.com",
 					"items": [
-						{
-							"key": "",
-							"label": "OFF(不修改)"
-						},
+						{ "key": "", "label": "OFF(不修改)" },
 						{
 							"key": "play.itunes.apple.com",
 							"label": "play.itunes.apple.com (默认)"
@@ -710,7 +686,8 @@
 							"key": "play-edge.itunes.apple.com",
 							"label": "play-edge.itunes.apple.com (不推荐，与播放服务域名重叠)"
 						}
-					]
+					],
+					"desc": "因为FPS服务域名禁止MitM，修改此地址可以分离HLS与FPS的域名，从而恢复对DualSubs的双语字幕支持。"
 				},
 				{
 					"id": "@iRingo.TV.Settings.Tabs",
@@ -1529,10 +1506,7 @@
 				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/📰-News\">📰 News</a>的使用说明进行配置",
 				"影响功能范围……等"
 			],
-			"keys": [
-				"@iRingo.News.Settings",
-				"@iRingo.News.Caches"
-			],
+			"keys": ["@iRingo.News.Settings", "@iRingo.News.Caches"],
 			"settings": [
 				{
 					"id": "@iRingo.News.Settings.Switch",
@@ -1620,10 +1594,7 @@
 				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/✈️-TestFlight\">✈️ TestFlight</a>的使用说明进行配置",
 				"影响功能范围……等"
 			],
-			"keys": [
-				"@iRingo.TestFlight.Settings",
-				"@iRingo.TestFlight.Caches"
-			],
+			"keys": ["@iRingo.TestFlight.Settings", "@iRingo.TestFlight.Caches"],
 			"settings": [
 				{
 					"id": "@iRingo.TestFlight.Settings.Switch",
@@ -1718,10 +1689,7 @@
 				"请参照<a href=\"https://github.com/VirgilClyne/iRingo/wiki/⌚️-WATCH\">⌚️ WATCH</a>的使用说明进行配置",
 				"影响功能范围WATCH上的“指南针”、“地图”、“News”等"
 			],
-			"keys": [
-				"@iRingo.Watch.Settings",
-				"@iRingo.Watch.Caches"
-			],
+			"keys": ["@iRingo.Watch.Settings", "@iRingo.Watch.Caches"],
 			"settings": [
 				{
 					"id": "@iRingo.Maps.Settings.GeoManifest.Dynamic.Config.CountryCode.watchOS",
