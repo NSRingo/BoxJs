@@ -132,7 +132,7 @@
 				}
 			],
 			"author": "@VirgilClyne",
-			"repo": "https://github.com/VirgilClyne/iRingo/",
+			"repo": "https://github.com/NSRingo/Weather",
 			"icons": [
 				"https://developer.https://developer.apple.com/assets/elements/icons/weather/weather-128x128.png",
 				"https://developer.https://developer.apple.com/assets/elements/icons/weather/weather-128x128.png"
@@ -145,270 +145,296 @@
 				"请参照<a href=\"https://NSRingo.github.io/guide/GeoServices/location\">📍 定位</a>的使用说明进行配置",
 				"影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"
 			],
-			"keys": [
-				"@iRingo.Location.Settings",
-				"@iRingo.Location.Caches"
-			],
+			"keys": ["@iRingo.Location.Settings", "@iRingo.Location.Caches"],
 			"settings": [
 				{
-					"id": "@iRingo.Location.Settings.Switch",
-					"name": "总功能开关",
-					"val": true,
-					"type": "boolean",
-					"desc": "是否启用此APP修改"
-				},
-				{
 					"id": "@iRingo.Location.Settings.PEP.GCC",
-					"name": "[地区检测]地理国家或地区代码",
+					"name": "[地区检测] 地理国家或地区代码",
 					"val": "US",
 					"type": "selects",
 					"desc": "要更改为的地区或国家，此选项影响Wi-Fi或有线网络下国家和地区检测的结果",
 					"items": [
 						{
+							"key": "AUTO",
+							"label": "🇺🇳自动（跟随地区检测结果）"
+						},
+						{
 							"key": "CN",
-							"label": "中国大陆"
+							"label": "🇨🇳中国大陆"
 						},
 						{
 							"key": "HK",
-							"label": "香港"
+							"label": "🇭🇰中国香港"
 						},
 						{
 							"key": "TW",
-							"label": "台湾"
+							"label": "🇹🇼中国台湾"
 						},
 						{
 							"key": "SG",
-							"label": "新加坡"
+							"label": "🇸🇬新加坡"
 						},
 						{
 							"key": "US",
-							"label": "美国"
+							"label": "🇺🇸美国"
 						},
 						{
 							"key": "JP",
-							"label": "日本"
+							"label": "🇯🇵日本"
 						},
 						{
 							"key": "AU",
-							"label": "澳大利亚"
+							"label": "🇦🇺澳大利亚"
 						},
 						{
 							"key": "GB",
-							"label": "英国"
+							"label": "🇬🇧英国"
 						},
 						{
 							"key": "KR",
-							"label": "韩国"
+							"label": "🇰🇷韩国"
 						},
 						{
 							"key": "CA",
-							"label": "加拿大"
+							"label": "🇨🇦加拿大"
+						},
+						{
+							"key": "IE",
+							"label": "🇮🇪爱尔兰"
 						}
 					]
-				},
-				{
-					"id": "@iRingo.Location.Settings.Geo_manifest.Dynamic.Config.Country_code",
-					"name": "[动态配置]地理服务清单的国家或地区代码",
-					"val": "CN",
-					"type": "selects",
-					"desc": "要更改为的地区或国家，此选项影响“地图”整体配置内容，包括以下的地图功能与服务",
-					"items": [
-						{
-							"key": "CN",
-							"label": "中国大陆"
-						},
-						{
-							"key": "HK",
-							"label": "香港"
-						},
-						{
-							"key": "TW",
-							"label": "台湾"
-						},
-						{
-							"key": "SG",
-							"label": "新加坡"
-						},
-						{
-							"key": "US",
-							"label": "美国"
-						},
-						{
-							"key": "JP",
-							"label": "日本"
-						},
-						{
-							"key": "AU",
-							"label": "澳大利亚"
-						},
-						{
-							"key": "GB",
-							"label": "英国"
-						},
-						{
-							"key": "KR",
-							"label": "韩国"
-						},
-						{
-							"key": "CA",
-							"label": "加拿大"
-						}
-					]
-				},
-				{
-					"id": "@iRingo.Location.Settings.Services.Dispatcher",
-					"name": "[调度程序]数据源",
-					"val": "AUTO",
-					"type": "selects",
-					"desc": "调度程序的数据源，此选项影响公共指南，兴趣点(POI)与位置信息等功能",
-					"items": [
-						{
-							"key": "AUTO",
-							"label": "自动（随[动态配置]版本自动选择）"
-						},
-						{
-							"key": "CN",
-							"label": "中国大陆版(兴趣点:大众点评,位置信息:高德)"
-						},
-						{
-							"key": "XX",
-							"label": "国际版(兴趣点:Yelp,位置信息:TomTom)"
-						}
-					]
-				},
-				{
-					"id": "@iRingo.Location.Settings.Services.Directions",
-					"name": "[导航]数据源",
-					"val": "AUTO",
-					"type": "selects",
-					"desc": "导航服务的数据源，此选项影响导航服务",
-					"items": [
-						{
-							"key": "AUTO",
-							"label": "自动（随[动态配置]版本自动选择）"
-						},
-						{
-							"key": "CN",
-							"label": "中国大陆版（高德）"
-						},
-						{
-							"key": "XX",
-							"label": "国际版"
-						}
-					]
-				},
-				{
-					"id": "@iRingo.Location.Settings.Services.Traffic",
-					"name": "[交通状况]数据源",
-					"val": "AUTO",
-					"type": "selects",
-					"desc": "交通状况服务的数据源，此选项影响交通状况与道路信息服务",
-					"items": [
-						{
-							"key": "AUTO",
-							"label": "自动（随[动态配置]版本自动选择）"
-						}
-					]
-				},
-				{
-					"id": "@iRingo.Location.Settings.Services.Tiles",
-					"name": "[瓦片地图]服务版本",
-					"val": "AUTO",
-					"type": "selects",
-					"desc": "瓦片地图的数据源，此选项影响使用的地图与图层",
-					"items": [
-						{
-							"key": "AUTO",
-							"label": "自动（随[动态配置]版本自动选择）"
-						}
-					]
-				},
-				{
-					"id": "@iRingo.Location.Settings.Config.Announcements.Environment",
-					"name": "[通告配置]环境代码",
-					"val": "prod-cn",
-					"type": "selects",
-					"desc": "通告的配置文件的环境代码，此选项影响功能未知",
-					"items": [
-						{
-							"key": "prod-cn",
-							"label": "中国大陆版"
-						},
-						{
-							"key": "prod",
-							"label": "国际版"
-						}
-					]
-				},
-				{
-					"id": "@iRingo.Location.Settings.Config.Defaults.LagunaBeach",
-					"name": "[默认配置]为“地图”提供助力",
-					"val": true,
-					"type": "boolean",
-					"desc": "是否启用“评分与照片”，可让您将图像、评分或其他内容发布到所选的兴趣点。(“设置” >“地图”>“评分与照片”)"
-				},
-				{
-					"id": "@iRingo.Location.Settings.Config.Defaults.DrivingMultiWaypointRoutesEnabled",
-					"name": "[默认配置]多途经点路线规划",
-					"val": true,
-					"type": "boolean",
-					"desc": "是否启用“多途经点路线规划”，可在一条路线中添加多个途经点。（iOS 16）"
-				},
-				{
-					"id": "@iRingo.Location.Settings.Config.Defaults.GEOAddressCorrection",
-					"name": "[默认配置]地址校正",
-					"val": true,
-					"type": "boolean",
-					"desc": "是否启用定位地址矫正"
-				},
-				{
-					"id": "@iRingo.Location.Settings.Config.Defaults.LookupMaxParametersCount",
-					"name": "[默认配置]Spatial批量查询上限",
-					"val": true,
-					"type": "boolean",
-					"desc": "是否移除Spatial批量查询上限"
-				},
-				{
-					"id": "@iRingo.Location.Settings.Config.Defaults.LocalitiesAndLandmarks",
-					"name": "[默认配置]景点与地标支持",
-					"val": true,
-					"type": "boolean",
-					"desc": "是否启用景点与地标支持"
-				},
-				{
-					"id": "@iRingo.Location.Settings.Config.Defaults.PedestrianAR",
-					"name": "[默认配置]现实世界中的路线",
-					"val": true,
-					"type": "boolean",
-					"desc": "是否启用在增强现实中查看导航(“设置” >“地图”>“步行”>“举起以查看”)"
-				},
-				{
-					"id": "@iRingo.Location.Settings.Config.Defaults.6694982d2b14e95815e44e970235e230",
-					"name": "[默认配置]6694982d2b14e95815e44e970235e230",
-					"val": true,
-					"type": "boolean",
-					"desc": "6694982d2b14e95815e44e970235e230"
-				},
-				{
-					"id": "@iRingo.Location.Settings.Config.Defaults.OpticalHeading",
-					"name": "[默认配置]导航准确性",
-					"val": true,
-					"type": "boolean",
-					"desc": "是否使用相机和运动传感器提高您位置和步行朝向的准确度(“设置” >“地图”>“步行”>“增强”)"
-				},
-				{
-					"id": "@iRingo.Location.Settings.Config.Defaults.UseCLPedestrianMapMatchedLocations",
-					"name": "[默认配置]使用AR地图匹配地点",
-					"val": true,
-					"type": "boolean",
-					"desc": "是否使用AR地图匹配地点"
 				}
 			],
 			"author": "@VirgilClyne",
-			"repo": "https://github.com/VirgilClyne/iRingo/",
+			"repo": "https://github.com/NSRingo/GeoServices",
 			"icons": [
 				"https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios15-location-arrow-status-icon.png",
 				"https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios15-location-arrow-status-icon.png"
+			]
+		},
+		{
+			"id": "iRingo.Maps",
+			"name": "🗺️ 地图",
+			"descs_html": [
+				"请参照<a href=\"https://NSRingo.github.io/guide/GeoServices/maps\">🗺️ 地图</a>的使用说明进行配置",
+				"影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"
+			],
+			"keys": ["@iRingo.Maps.Settings", "@iRingo.Maps.Caches"],
+			"settings": [
+				{
+					"id": "@iRingo.Maps.Settings.GeoManifest.Dynamic.Config.CountryCode",
+					"name": "[动态配置] 资源清单的国家或地区代码",
+					"val": "CN",
+					"type": "selects",
+					"desc": "此选项影响“地图”整体配置内容，包括以下的地图功能与服务。",
+					"items": [
+						{
+							"key": "AUTO",
+							"label": "🇺🇳自动（跟随用户当前所在地区）"
+						},
+						{
+							"key": "CN",
+							"label": "🇨🇳中国大陆"
+						},
+						{
+							"key": "HK",
+							"label": "🇭🇰中国香港"
+						},
+						{
+							"key": "TW",
+							"label": "🇹🇼中国台湾"
+						},
+						{
+							"key": "SG",
+							"label": "🇸🇬新加坡"
+						},
+						{
+							"key": "US",
+							"label": "🇺🇸美国"
+						},
+						{
+							"key": "JP",
+							"label": "🇯🇵日本"
+						},
+						{
+							"key": "AU",
+							"label": "🇦🇺澳大利亚"
+						},
+						{
+							"key": "GB",
+							"label": "🇬🇧英国"
+						},
+						{
+							"key": "KR",
+							"label": "🇰🇷韩国"
+						},
+						{
+							"key": "CA",
+							"label": "🇨🇦加拿大"
+						},
+						{
+							"key": "IE",
+							"label": "🇮🇪爱尔兰"
+						}
+					]
+				},
+				{
+					"id": "@iRingo.Maps.Settings.UrlInfoSet.Dispatcher",
+					"name": "[URL信息集] 调度器",
+					"val": "AutoNavi",
+					"type": "selects",
+					"desc": "地点数据接口，此选项影响公共指南，兴趣点(POI)与位置信息等功能。",
+					"items": [
+						{
+							"key": "AUTO",
+							"label": "🇺🇳自动（随[动态配置]版本自动选择）"
+						},
+						{
+							"key": "AutoNavi",
+							"label": "🧭高德（🇨🇳:互动百科/大众点评/携程 | 🇺🇳:维基百科/Yelp/Booking）"
+						},
+						{
+							"key": "Apple",
+							"label": "Apple（维基百科/Yelp/Booking）"
+						}
+					]
+				},
+				{
+					"id": "@iRingo.Maps.Settings.UrlInfoSet.Directions",
+					"name": "[URL信息集] 导航与ETA",
+					"val": "AutoNavi",
+					"type": "selects",
+					"desc": "导航与ETA服务接口，此选项影响导航与ETA(到达时间)等功能。",
+					"items": [
+						{
+							"key": "AUTO",
+							"label": "🇺🇳自动（随[动态配置]版本自动选择）"
+						},
+						{
+							"key": "AutoNavi",
+							"label": "🧭高德（🇨🇳:高德地图 | 🇺🇳:TomTom）"
+						},
+						{
+							"key": "Apple",
+							"label": "Apple（🇨🇳:🈚️ | 🇺🇳:TomTom）"
+						}
+					]
+				},
+				{
+					"id": "@iRingo.Maps.Settings.UrlInfoSet.RAP",
+					"name": "[URL信息集] 评分和照片",
+					"val": "Apple",
+					"type": "selects",
+					"desc": "评分和照片服务接口，此选项影响评分和照片服务以及照片使用。",
+					"items": [
+						{
+							"key": "AUTO",
+							"label": "🇺🇳自动（随[动态配置]版本自动选择）"
+						},
+						{
+							"key": "AutoNavi",
+							"label": "🧭高德（🇨🇳:🈶️但未开放 | 🇺🇳:🈚️）"
+						},
+						{
+							"key": "Apple",
+							"label": "Apple（🇨🇳:🈚️ | 🇺🇳:🈶️）"
+						}
+					]
+				},
+				{
+					"id": "@iRingo.Maps.Settings.UrlInfoSet.LocationShift",
+					"name": "[URL信息集] 定位漂移",
+					"val": "AUTO",
+					"type": "selects",
+					"desc": "定位漂移修正服务接口，控制定位漂移和🧭指南针与📍坐标的经纬度。",
+					"items": [
+						{
+							"key": "AUTO",
+							"label": "🇺🇳自动（随[动态配置]版本自动选择）"
+						},
+						{
+							"key": "AutoNavi",
+							"label": "🧭高德（🈚️坐标，使用🇨🇳GCJ-02坐标）"
+						},
+						{
+							"key": "Apple",
+							"label": "Apple（🈶️坐标，使用🇺🇳WGS-84坐标）"
+						}
+					]
+				},
+				{
+					"id": "@iRingo.Maps.Settings.TileSet.Satellite",
+					"name": "[瓦片数据集] 卫星图像",
+					"val": "HYBRID",
+					"type": "selects",
+					"desc": "此选项影响所列位图、影像与模型数据。",
+					"items": [
+						{
+							"key": "AUTO",
+							"label": "🇺🇳自动（随[动态配置]版本自动选择）"
+						},
+						{
+							"key": "HYBRID",
+							"label": "混合（🇨🇳:2D较新 | 🇺🇳:主要城市3D）"
+						},
+						{
+							"key": "CN",
+							"label": "🇨🇳中国四维（🇨🇳:2D较新 | 🇺🇳:🈚️）"
+						},
+						{
+							"key": "XX",
+							"label": "🇺🇳DigitalGlobe（🇨🇳:2D较旧 | 🇺🇳:2D+主要城市3D）"
+						}
+					]
+				},
+				{
+					"id": "@iRingo.Maps.Settings.TileSet.Flyover",
+					"name": "[瓦片数据集] 飞行俯瞰",
+					"val": "XX",
+					"type": "selects",
+					"desc": "此选项影响飞行俯瞰全球各地的主要地标和城市功能。",
+					"items": [
+						{
+							"key": "AUTO",
+							"label": "🇺🇳自动（随[动态配置]版本自动选择）"
+						},
+						{
+							"key": "CN",
+							"label": "🇨🇳Apple（🇨🇳:🈚️ | 🇺🇳:🈚️）"
+						},
+						{
+							"key": "XX",
+							"label": "🇺🇳Apple（🇨🇳:🈚️ | 🇺🇳:🈶️）"
+						}
+					]
+				},
+				{
+					"id": "@iRingo.Maps.Settings.TileSet.Munin",
+					"name": "[瓦片数据集] 四处看看",
+					"val": "XX",
+					"type": "selects",
+					"desc": "此选项影响 360 度全景视角在某些地点四处看看功能。",
+					"items": [
+						{
+							"key": "AUTO",
+							"label": "🇺🇳自动（随[动态配置]版本自动选择）"
+						},
+						{
+							"key": "CN",
+							"label": "🇨🇳Apple（🇨🇳:🈚️ | 🇺🇳:🈚️）"
+						},
+						{
+							"key": "XX",
+							"label": "🇺🇳Apple（🇨🇳:🈚️ | 🇺🇳:🈶️）"
+						}
+					]
+				}
+			],
+			"author": "@VirgilClyne",
+			"repo": "https://github.com/NSRingo/GeoServices",
+			"icons": [
+				"https://developer.apple.com/assets/elements/icons/maps/maps-128x128.png",
+				"https://developer.apple.com/assets/elements/icons/maps/maps-128x128.png"
 			]
 		},
 		{
@@ -587,7 +613,7 @@
 				}
 			],
 			"author": "@VirgilClyne",
-			"repo": "https://github.com/VirgilClyne/iRingo/",
+			"repo": "https://github.com/NSRingo/Siri",
 			"icons": [
 				"https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Siri.png",
 				"https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Siri.png"
@@ -1360,7 +1386,7 @@
 				}
 			],
 			"author": "@VirgilClyne",
-			"repo": "https://github.com/VirgilClyne/iRingo/",
+			"repo": "https://github.com/NSRingo/TV",
 			"icons": [
 				"https://developer.apple.com/assets/elements/icons/apple-tv/apple-tv-128x128.png",
 				"https://developer.apple.com/assets/elements/icons/apple-tv/apple-tv-128x128.png"
@@ -1440,7 +1466,7 @@
 				}
 			],
 			"author": "@VirgilClyne",
-			"repo": "https://github.com/VirgilClyne/iRingo/",
+			"repo": "https://github.com/NSRingo/News",
 			"icons": [
 				"https://developer.apple.com/assets/elements/icons/news/news-128x128.png",
 				"https://developer.apple.com/assets/elements/icons/news/news-128x128.png"
@@ -1534,10 +1560,105 @@
 				}
 			],
 			"author": "@VirgilClyne",
-			"repo": "https://github.com/VirgilClyne/iRingo/",
+			"repo": "https://github.com/NSRingo/TestFlight",
 			"icons": [
 				"https://developer.apple.com/assets/elements/icons/testflight/testflight-128x128.png",
 				"https://developer.apple.com/assets/elements/icons/testflight/testflight-128x128.png"
+			]
+		},
+		{
+			"id": "iRingo.Watch",
+			"name": "⌚️ WATCH",
+			"descs_html": [
+				"请参照<a href=\"https://NSRingo.github.io/guide/apple-watch\">⌚️ WATCH</a>的使用说明进行配置",
+				"影响功能范围WATCH上的“指南针”、“地图”、“News”等"
+			],
+			"keys": ["@iRingo.Watch.Settings", "@iRingo.Watch.Caches"],
+			"settings": [
+				{
+					"id": "@iRingo.Watch.Settings.GeoManifest.Dynamic.Config.CountryCode",
+					"name": "[动态配置] 资源清单的国家或地区代码",
+					"val": "US",
+					"type": "selects",
+					"desc": "此选项影响“地图”整体配置内容，包括以下的地图功能与服务。",
+					"items": [
+						{
+							"key": "AUTO",
+							"label": "🇺🇳自动（跟随地区检测结果）"
+						},
+						{
+							"key": "CN",
+							"label": "🇨🇳中国大陆"
+						},
+						{
+							"key": "HK",
+							"label": "🇭🇰中国香港"
+						},
+						{
+							"key": "TW",
+							"label": "🇹🇼中国台湾"
+						},
+						{
+							"key": "SG",
+							"label": "🇸🇬新加坡"
+						},
+						{
+							"key": "US",
+							"label": "🇺🇸美国"
+						},
+						{
+							"key": "JP",
+							"label": "🇯🇵日本"
+						},
+						{
+							"key": "AU",
+							"label": "🇦🇺澳大利亚"
+						},
+						{
+							"key": "GB",
+							"label": "🇬🇧英国"
+						},
+						{
+							"key": "KR",
+							"label": "🇰🇷韩国"
+						},
+						{
+							"key": "CA",
+							"label": "🇨🇦加拿大"
+						},
+						{
+							"key": "IE",
+							"label": "🇮🇪爱尔兰"
+						}
+					]
+				},
+				{
+					"id": "@iRingo.Watch.Settings.UrlInfoSet.LocationShift",
+					"name": "[URL信息集] 定位漂移",
+					"val": "Apple",
+					"type": "selects",
+					"desc": "定位漂移修正服务接口，控制定位漂移和🧭指南针与📍坐标的经纬度。",
+					"items": [
+						{
+							"key": "AUTO",
+							"label": "🇺🇳自动（随[动态配置]版本自动选择）"
+						},
+						{
+							"key": "AutoNavi",
+							"label": "🧭高德（🈚️坐标，使用🇨🇳GCJ-02坐标）"
+						},
+						{
+							"key": "Apple",
+							"label": "Apple（🈶️坐标，使用🇺🇳WGS-84坐标）"
+						}
+					]
+				}
+			],
+			"author": "@VirgilClyne",
+			"repo": "https://github.com/NSRingo",
+			"icons": [
+				"https://developer.apple.com/assets/elements/icons/apple-watch-app/apple-watch-app-128x128.png",
+				"https://developer.apple.com/assets/elements/icons/apple-watch-app/apple-watch-app-128x128.png"
 			]
 		}
 	]
