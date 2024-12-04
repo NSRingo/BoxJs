@@ -866,13 +866,6 @@
 			"keys": ["@iRingo.TV.Settings", "@iRingo.TV.Caches"],
 			"settings": [
 				{
-					"id": "@iRingo.TV.Settings.Switch",
-					"name": "总功能开关",
-					"type": "boolean",
-					"val": true,
-					"desc": "是否启用此APP修改"
-				},
-				{
 					"id": "@iRingo.TV.Settings.ThirdParty",
 					"name": "启用第三方App与TV app关联功能",
 					"type": "boolean",
@@ -881,7 +874,7 @@
 				},
 				{
 					"id": "@iRingo.TV.Settings.HLSUrl",
-					"name": "HTTP实时流(HLS)地址",
+					"name": "[主机名] HTTP实时流(HLS)地址",
 					"type": "selects",
 					"val": "play-edge.itunes.apple.com",
 					"items": [
@@ -899,7 +892,7 @@
 				},
 				{
 					"id": "@iRingo.TV.Settings.FPSUrl",
-					"name": "FairPlay流(FPS)地址",
+					"name": "[主机名] FairPlay流(FPS)地址",
 					"type": "selects",
 					"val": "play.itunes.apple.com",
 					"items": [
@@ -1822,13 +1815,6 @@
 			],
 			"keys": ["@iRingo.TestFlight.Settings", "@iRingo.TestFlight.Caches"],
 			"settings": [
-				{
-					"id": "@iRingo.TestFlight.Settings.Switch",
-					"name": "总功能开关",
-					"val": true,
-					"type": "boolean",
-					"desc": "是否启用此APP修改"
-				},
 				{
 					"id": "@iRingo.TestFlight.Settings.CountryCode",
 					"name": "国家或地区代码",
