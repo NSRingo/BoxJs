@@ -9,12 +9,7 @@
 		{
 			"id": "iRingo.Weather",
 			"name": "🌤 天气",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/Weather/weather\">🌤 天气</a>的使用说明进行配置",
-				"填写完成后别忘点击此页面底端右下角的\"保存\"。",
-				"查询速度:\"私有API+城市\" > \"私有API+观测站\" > \"公共API+观测站\"",
-				"定位精度:\"观测站\" > \"城市\""
-			],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/Weather/weather\">🌤 天气</a>的使用说明进行配置", "填写完成后别忘点击此页面底端右下角的\"保存\"。", "查询速度:\"私有API+城市\" > \"私有API+观测站\" > \"公共API+观测站\"", "定位精度:\"观测站\" > \"城市\""],
 			"keys": ["@iRingo.Weather.Settings", "@iRingo.Weather.Caches"],
 			"settings": [
 				{
@@ -253,18 +248,12 @@
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo/Weather",
-			"icons": [
-				"https://developer.https://developer.apple.com/assets/elements/icons/weather/weather-128x128.png",
-				"https://developer.https://developer.apple.com/assets/elements/icons/weather/weather-128x128.png"
-			]
+			"icons": ["https://developer.https://developer.apple.com/assets/elements/icons/weather/weather-128x128.png", "https://developer.https://developer.apple.com/assets/elements/icons/weather/weather-128x128.png"]
 		},
 		{
 			"id": "iRingo.Location",
 			"name": "📍 定位",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/GeoServices/location\">📍 定位</a>的使用说明进行配置",
-				"影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"
-			],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/GeoServices/location\">📍 定位</a>的使用说明进行配置", "影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"],
 			"keys": ["@iRingo.Location.Settings", "@iRingo.Location.Caches"],
 			"settings": [
 				{
@@ -327,18 +316,12 @@
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo/GeoServices",
-			"icons": [
-				"https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios15-location-arrow-status-icon.png",
-				"https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios15-location-arrow-status-icon.png"
-			]
+			"icons": ["https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios15-location-arrow-status-icon.png", "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios15-location-arrow-status-icon.png"]
 		},
 		{
 			"id": "iRingo.Maps",
 			"name": "🗺️ 地图",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/GeoServices/maps\">🗺️ 地图</a>的使用说明进行配置",
-				"影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"
-			],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/GeoServices/maps\">🗺️ 地图</a>的使用说明进行配置", "影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"],
 			"keys": ["@iRingo.Maps.Settings", "@iRingo.Maps.Caches"],
 			"settings": [
 				{
@@ -552,201 +535,85 @@
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo/GeoServices",
-			"icons": [
-				"https://developer.apple.com/assets/elements/icons/maps/maps-128x128.png",
-				"https://developer.apple.com/assets/elements/icons/maps/maps-128x128.png"
-			]
+			"icons": ["https://developer.apple.com/assets/elements/icons/maps/maps-128x128.png", "https://developer.apple.com/assets/elements/icons/maps/maps-128x128.png"]
 		},
 		{
-			"id": "iRingo.Siri",
-			"name": "⭕ Siri与搜索",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/Siri/siri-and-search\">⭕ Siri与搜索</a>的使用说明进行配置",
-				"影响功能范围包括但不限于「Siri建议」「来自APPLE的内容」「来自APPLE的建议」等"
-			],
-			"keys": ["@iRingo.Siri.Settings", "@iRingo.Siri.Caches"],
+			"id": "iRingo.Spotlight",
+			"name": "🔍 聚焦搜索",
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/Siri/siri-and-search\">⭕ Siri与搜索</a>的使用说明进行配置", "影响功能范围包括「Siri建议」「来自APPLE的内容」「来自APPLE的建议」等"],
+			"keys": ["@iRingo.Spotlight.Settings", "@iRingo.Spotlight.Caches"],
 			"settings": [
 				{
-					"id": "@iRingo.Siri.Settings.Switch",
-					"name": "总功能开关",
-					"val": true,
-					"type": "boolean",
-					"desc": "是否启用此APP修改"
-				},
-				{
-					"id": "@iRingo.Siri.Settings.CountryCode",
+					"id": "@iRingo.Spotlight.Settings.CountryCode",
 					"name": "国家或地区代码",
-					"val": "SG",
 					"type": "selects",
-					"desc": "不同国家或地区提供的内容或有差别，此选项同时会影响分配给您不同地区的Siri服务器",
+					"val": "SG",
 					"items": [
-						{
-							"key": "AUTO",
-							"label": "🇺🇳自动（跟随系统地区设置）"
-						},
-						{
-							"key": "CN",
-							"label": "🇨🇳中国大陆"
-						},
-						{
-							"key": "HK",
-							"label": "🇭🇰香港"
-						},
-						{
-							"key": "TW",
-							"label": "🇹🇼台湾"
-						},
-						{
-							"key": "SG",
-							"label": "🇸🇬新加坡"
-						},
-						{
-							"key": "US",
-							"label": "🇺🇸美国"
-						},
-						{
-							"key": "JP",
-							"label": "🇯🇵日本"
-						},
-						{
-							"key": "AU",
-							"label": "🇦🇺澳大利亚"
-						},
-						{
-							"key": "GB",
-							"label": "🇬🇧英国"
-						},
-						{
-							"key": "KR",
-							"label": "🇰🇷韩国"
-						},
-						{
-							"key": "CA",
-							"label": "🇨🇦加拿大"
-						},
-						{
-							"key": "IE",
-							"label": "🇮🇪爱尔兰"
-						}
-					]
-				},
-				{
-					"id": "@iRingo.Siri.Settings.Domains",
-					"name": "启用领域",
-					"val": [
-						"web",
-						"itunes",
-						"app_store",
-						"movies",
-						"restaurants",
-						"maps"
+						{ "key": "AUTO", "label": "🇺🇳自动（跟随系统地区设置）" },
+						{ "key": "CN", "label": "🇨🇳中国大陆" },
+						{ "key": "HK", "label": "🇭🇰中国香港" },
+						{ "key": "TW", "label": "🇹🇼中国台湾" },
+						{ "key": "SG", "label": "🇸🇬新加坡" },
+						{ "key": "US", "label": "🇺🇸美国" },
+						{ "key": "JP", "label": "🇯🇵日本" },
+						{ "key": "AU", "label": "🇦🇺澳大利亚" },
+						{ "key": "GB", "label": "🇬🇧英国" },
+						{ "key": "KR", "label": "🇰🇷韩国" },
+						{ "key": "CA", "label": "🇨🇦加拿大" },
+						{ "key": "IE", "label": "🇮🇪爱尔兰" }
 					],
-					"type": "checkboxes",
-					"desc": "启用搜索的领域，未选项领域将被关闭，启用领域数据由国家和地区决定，此选项仅代表功能上的开启，不代表对应地区一定有数据和服务",
-					"items": [
-						{
-							"key": "web",
-							"label": "网页"
-						},
-						{
-							"key": "itunes",
-							"label": "iTunes"
-						},
-						{
-							"key": "app_store",
-							"label": "App Store"
-						},
-						{
-							"key": "movies",
-							"label": "电影"
-						},
-						{
-							"key": "restaurants",
-							"label": "餐厅"
-						},
-						{
-							"key": "maps",
-							"label": "地图"
-						}
-					]
+					"desc": "不同国家或地区提供的内容或有差别，此选项同时会影响分配给您不同地区的 Siri 服务器。"
 				},
 				{
-					"id": "@iRingo.Siri.Settings.Functions",
-					"name": "强制启用的功能",
-					"val": [
-						"flightutilities",
-						"lookup",
-						"mail",
-						"messages",
-						"news",
-						"safari",
-						"siri",
-						"spotlight",
-						"visualintelligence"
+					"id": "@iRingo.Spotlight.Settings.Domains",
+					"name": "搜索领域",
+					"type": "checkboxes",
+					"val": ["web", "itunes", "app_store", "movies", "restaurants", "maps"],
+					"items": [{ "key": "web", "label": "网页" }, { "key": "itunes", "label": "iTunes" }, { "key": "app_store", "label": "App Store" }, { "key": "movies", "label": "电影" }, { "key": "restaurants", "label": "餐厅" }, { "key": "maps", "label": "地图" }],
+					"desc": "启用搜索的领域，领域数据由国家或地区设置决定，此选项仅开启搜索的领域，不代表设置的地区一定有相应的数据和服务。"
+				},
+				{
+					"id": "@iRingo.Spotlight.Settings.Functions",
+					"name": "功能",
+					"type": "checkboxes",
+					"val": ["flightutilities", "lookup", "mail", "messages", "news", "safari", "siri", "spotlight", "visualintelligence"],
+					"items": [
+						{ "key": "flightutilities", "label": "航班工具" },
+						{ "key": "lookup", "label": "查询" },
+						{ "key": "mail", "label": "邮件" },
+						{ "key": "messages", "label": "信息" },
+						{ "key": "news", "label": "新闻" },
+						{ "key": "safari", "label": "Safari浏览器" },
+						{ "key": "siri", "label": "Siri" },
+						{ "key": "spotlight", "label": "聚焦搜索" },
+						{ "key": "visualintelligence", "label": "视觉智能" }
 					],
-					"type": "checkboxes",
-					"desc": "强制启用Siri建议的APP，被选项的功能会被强制开启，但是未选不代表关闭对应的功能，仅代表还原到该地区默认设置状态",
-					"items": [
-						{
-							"key": "flightutilities",
-							"label": "航班工具"
-						},
-						{
-							"key": "lookup",
-							"label": "查询"
-						},
-						{
-							"key": "mail",
-							"label": "邮件"
-						},
-						{
-							"key": "messages",
-							"label": "信息"
-						},
-						{
-							"key": "news",
-							"label": "新闻"
-						},
-						{
-							"key": "safari",
-							"label": "Safari浏览器"
-						},
-						{
-							"key": "siri",
-							"label": "Siri"
-						},
-						{
-							"key": "spotlight",
-							"label": "聚焦搜索"
-						},
-						{
-							"key": "visualintelligence",
-							"label": "视觉智能"
-						}
-					]
+					"desc": "启用的「Siri 建议」功能，未选的功能不代表关闭，仅代表还原到该地区默认设置状态。"
 				},
 				{
-					"id": "@iRingo.Siri.Settings.Safari_Smart_History",
-					"name": "Safari智能历史记录",
-					"val": true,
+					"id": "@iRingo.Spotlight.Settings.SafariSmartHistory",
+					"name": "Safari 智能历史记录",
 					"type": "boolean",
-					"desc": "是否在Safari浏览器中启用基于历史记录的Siri建议功能，启用后将在Safari浏览器起始页推荐基于时间地点跨设备等的相关浏览记录"
+					"val": true,
+					"desc": "是否在 Safari 浏览器中启用基于历史记录的Siri建议功能，启用后将在Safari浏览器起始页推荐基于时间地点跨设备等的相关浏览记录。"
+				},
+				{
+					"id": "@iRingo.Spotlight.Settings.LogLevel",
+					"name": "[调试] 日志等级",
+					"type": "selects",
+					"val": "WARN",
+					"items": [{ "key": "OFF", "label": "关闭" }, { "key": "ERROR", "label": "❌ 错误" }, { "key": "WARN", "label": "⚠️ 警告" }, { "key": "INFO", "label": "ℹ️ 信息" }, { "key": "DEBUG", "label": "🅱️ 调试" }, { "key": "ALL", "label": "全部" }],
+					"desc": "选择脚本日志的输出等级，低于所选等级的日志将全部输出。"
 				}
 			],
 			"author": "@VirgilClyne",
-			"repo": "https://github.com/NSRingo/Siri",
-			"icons": [
-				"https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Siri.png",
-				"https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Siri.png"
-			]
+			"repo": "https://github.com/NSRingo/Siri/siri-and-search",
+			"icons": ["https://developer.apple.com/assets/elements/icons/spotlight/spotlight-128x128.png", "https://developer.apple.com/assets/elements/icons/spotlight/spotlight-128x128.png"]
 		},
 		{
 			"id": "iRingo.TV",
 			"name": "📺 TV",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/apple-tv\">📺 TV</a>的使用说明进行配置",
-				"自定义TV app的配置文件及各个栏目"
-			],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/apple-tv\">📺 TV</a>的使用说明进行配置", "自定义TV app的配置文件及各个栏目"],
 			"keys": ["@iRingo.TV.Settings", "@iRingo.TV.Caches"],
 			"settings": [
 				{
@@ -795,18 +662,7 @@
 				{
 					"id": "@iRingo.TV.Settings.Tabs",
 					"name": "启用的标签与栏目",
-					"val": [
-						"WatchNow",
-						"Originals",
-						"MLS",
-						"Sports",
-						"Kids",
-						"Store",
-						"Movies",
-						"TV",
-						"Library",
-						"Search"
-					],
+					"val": ["WatchNow", "Originals", "MLS", "Sports", "Kids", "Store", "Movies", "TV", "Library", "Search"],
 					"type": "checkboxes",
 					"desc": "启用的标签与栏目，未选择的标签与栏目入口将被隐藏，启用的入口由国家和地区决定，此选项仅代表功能入口上的开启，不代表对应地区一定有数据和服务",
 					"items": [
@@ -1597,18 +1453,12 @@
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo/TV",
-			"icons": [
-				"https://developer.apple.com/assets/elements/icons/apple-tv/apple-tv-128x128.png",
-				"https://developer.apple.com/assets/elements/icons/apple-tv/apple-tv-128x128.png"
-			]
+			"icons": ["https://developer.apple.com/assets/elements/icons/apple-tv/apple-tv-128x128.png", "https://developer.apple.com/assets/elements/icons/apple-tv/apple-tv-128x128.png"]
 		},
 		{
 			"id": "iRingo.News",
 			"name": "📰 News",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/apple-news\">📰 News</a>的使用说明进行配置",
-				"影响功能范围……等"
-			],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/apple-news\">📰 News</a>的使用说明进行配置", "影响功能范围……等"],
 			"keys": ["@iRingo.News.Settings", "@iRingo.News.Caches"],
 			"settings": [
 				{
@@ -1685,18 +1535,12 @@
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo/News",
-			"icons": [
-				"https://developer.apple.com/assets/elements/icons/news/news-128x128.png",
-				"https://developer.apple.com/assets/elements/icons/news/news-128x128.png"
-			]
+			"icons": ["https://developer.apple.com/assets/elements/icons/news/news-128x128.png", "https://developer.apple.com/assets/elements/icons/news/news-128x128.png"]
 		},
 		{
 			"id": "iRingo.TestFlight",
 			"name": "✈ TestFlight",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/test-flight\">✈️ TestFlight</a>的使用说明进行配置",
-				"影响功能范围……等"
-			],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/test-flight\">✈️ TestFlight</a>的使用说明进行配置", "影响功能范围……等"],
 			"keys": ["@iRingo.TestFlight.Settings", "@iRingo.TestFlight.Caches"],
 			"settings": [
 				{
@@ -1773,18 +1617,12 @@
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo/TestFlight",
-			"icons": [
-				"https://developer.apple.com/assets/elements/icons/testflight/testflight-128x128.png",
-				"https://developer.apple.com/assets/elements/icons/testflight/testflight-128x128.png"
-			]
+			"icons": ["https://developer.apple.com/assets/elements/icons/testflight/testflight-128x128.png", "https://developer.apple.com/assets/elements/icons/testflight/testflight-128x128.png"]
 		},
 		{
 			"id": "iRingo.Watch",
 			"name": "⌚️ WATCH",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/apple-watch\">⌚️ WATCH</a>的使用说明进行配置",
-				"影响功能范围WATCH上的“指南针”、“地图”、“News”等"
-			],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/apple-watch\">⌚️ WATCH</a>的使用说明进行配置", "影响功能范围WATCH上的“指南针”、“地图”、“News”等"],
 			"keys": ["@iRingo.Watch.Settings", "@iRingo.Watch.Caches"],
 			"settings": [
 				{
@@ -1868,10 +1706,7 @@
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo",
-			"icons": [
-				"https://developer.apple.com/assets/elements/icons/apple-watch-app/apple-watch-app-128x128.png",
-				"https://developer.apple.com/assets/elements/icons/apple-watch-app/apple-watch-app-128x128.png"
-			]
+			"icons": ["https://developer.apple.com/assets/elements/icons/apple-watch-app/apple-watch-app-128x128.png", "https://developer.apple.com/assets/elements/icons/apple-watch-app/apple-watch-app-128x128.png"]
 		}
 	]
 }
