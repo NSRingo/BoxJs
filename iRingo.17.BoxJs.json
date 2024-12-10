@@ -958,78 +958,29 @@
 					"name": "[动态配置] 资源清单的国家或地区代码",
 					"val": "US",
 					"type": "selects",
-					"desc": "此选项影响“地图”整体配置内容，包括以下的地图功能与服务。",
 					"items": [
-						{
-							"key": "AUTO",
-							"label": "🇺🇳自动（跟随地区检测结果）"
-						},
-						{
-							"key": "CN",
-							"label": "🇨🇳中国大陆"
-						},
-						{
-							"key": "HK",
-							"label": "🇭🇰中国香港"
-						},
-						{
-							"key": "TW",
-							"label": "🇹🇼中国台湾"
-						},
-						{
-							"key": "SG",
-							"label": "🇸🇬新加坡"
-						},
-						{
-							"key": "US",
-							"label": "🇺🇸美国"
-						},
-						{
-							"key": "JP",
-							"label": "🇯🇵日本"
-						},
-						{
-							"key": "AU",
-							"label": "🇦🇺澳大利亚"
-						},
-						{
-							"key": "GB",
-							"label": "🇬🇧英国"
-						},
-						{
-							"key": "KR",
-							"label": "🇰🇷韩国"
-						},
-						{
-							"key": "CA",
-							"label": "🇨🇦加拿大"
-						},
-						{
-							"key": "IE",
-							"label": "🇮🇪爱尔兰"
-						}
-					]
+						{ "key": "AUTO", "label": "🇺🇳自动（跟随地区检测结果）" },
+						{ "key": "CN", "label": "🇨🇳中国大陆" },
+						{ "key": "HK", "label": "🇭🇰中国香港" },
+						{ "key": "TW", "label": "🇹🇼中国台湾" },
+						{ "key": "SG", "label": "🇸🇬新加坡" },
+						{ "key": "US", "label": "🇺🇸美国" },
+						{ "key": "JP", "label": "🇯🇵日本" },
+						{ "key": "AU", "label": "🇦🇺澳大利亚" },
+						{ "key": "GB", "label": "🇬🇧英国" },
+						{ "key": "KR", "label": "🇰🇷韩国" },
+						{ "key": "CA", "label": "🇨🇦加拿大" },
+						{ "key": "IE", "label": "🇮🇪爱尔兰" }
+					],
+					"desc": "此选项影响“地图”整体配置内容，包括以下的地图功能与服务。"
 				},
 				{
 					"id": "@iRingo.Watch.Settings.UrlInfoSet.LocationShift",
 					"name": "[URL信息集] 定位漂移",
 					"val": "Apple",
 					"type": "selects",
-					"desc": "定位漂移修正服务接口，控制定位漂移和🧭指南针与📍坐标的经纬度。",
-					"items": [
-						{
-							"key": "AUTO",
-							"label": "🇺🇳自动（随[动态配置]版本自动选择）"
-						},
-						{
-							"key": "AutoNavi",
-							"label": "🧭高德（🈚️坐标，使用🇨🇳GCJ-02坐标）"
-						},
-						{
-							"key": "Apple",
-							"label": "Apple（🈶️坐标，使用🇺🇳WGS-84坐标）"
-						}
-					]
+					"items": [{ "key": "AUTO", "label": "🇺🇳自动（随[动态配置]版本自动选择）" }, { "key": "AutoNavi", "label": "🧭高德（🈚️坐标，使用🇨🇳GCJ-02坐标）" }, { "key": "Apple", "label": "Apple（🈶️坐标，使用🇺🇳WGS-84坐标）" }],
+					"desc": "定位漂移修正服务接口，控制定位漂移和🧭指南针与📍坐标的经纬度。"
 				}
 			],
 			"author": "@VirgilClyne",
