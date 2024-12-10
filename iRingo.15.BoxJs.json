@@ -21,14 +21,14 @@
 				},
 				{
 					"id": "@iRingo.Weather.NextHour.Switch",
-					"name": "[未来一小时降水强度]修改开关",
+					"name": "[未来一小时降水强度] 修改开关",
 					"val": true,
 					"type": "boolean",
 					"desc": "是否启用此功能修改"
 				},
 				{
 					"id": "@iRingo.Weather.NextHour.Mode",
-					"name": "[未来一小时降水强度]切换API",
+					"name": "[未来一小时降水强度] 切换API",
 					"val": "www.weatherol.cn",
 					"type": "radios",
 					"items": [
@@ -45,7 +45,7 @@
 				},
 				{
 					"id": "@iRingo.Weather.NextHour.HTTPHeaders",
-					"name": "[未来一小时降水强度]HTTP请求头",
+					"name": "[未来一小时降水强度] HTTP请求头",
 					"val": "{ \"Content-Type\": \"application/x-www-form-urlencoded\", \"User-Agent\": \"Mozilla/5.0 (iPhone; CPU iPhone OS 15_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.1 Mobile/15E148 Safari/604.1\" }",
 					"type": "text",
 					"placeholder": "{ \"User-Agent\": \"Mozilla/5.0 (iPhone; CPU iPhone OS 15_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.1 Mobile/15E148 Safari/604.1\" }",
@@ -53,7 +53,7 @@
 				},
 				{
 					"id": "@iRingo.Weather.NextHour.ColorfulClouds.Auth",
-					"name": "[未来一小时降水强度]彩云天气令牌",
+					"name": "[未来一小时降水强度] 彩云天气令牌",
 					"val": "",
 					"type": "text",
 					"placeholder": "ABcdef1g2hiJklmN",
@@ -61,14 +61,14 @@
 				},
 				{
 					"id": "@iRingo.Weather.AQI.Switch",
-					"name": "[空气质量]修改开关",
+					"name": "[空气质量] 修改开关",
 					"val": true,
 					"type": "boolean",
 					"desc": "是否启用此功能修改，数据来源：WAQI"
 				},
 				{
 					"id": "@iRingo.Weather.AQI.Mode",
-					"name": "[空气质量]工作模式",
+					"name": "[空气质量] 工作模式",
 					"val": "WAQI Public",
 					"type": "radios",
 					"items": [
@@ -85,7 +85,7 @@
 				},
 				{
 					"id": "@iRingo.Weather.AQI.Location",
-					"name": "[空气质量]定位精度",
+					"name": "[空气质量] 定位精度",
 					"val": "Station",
 					"type": "radios",
 					"items": [
@@ -102,7 +102,7 @@
 				},
 				{
 					"id": "@iRingo.Weather.AQI.Auth",
-					"name": "[空气质量]WAQI令牌",
+					"name": "[空气质量] WAQI令牌",
 					"val": "",
 					"type": "text",
 					"placeholder": "1234567893feefc5f0q5000bfo0c38d90bbeb",
@@ -110,7 +110,7 @@
 				},
 				{
 					"id": "@iRingo.Weather.AQI.Scale",
-					"name": "[空气质量]测量标准代码",
+					"name": "[空气质量] 测量标准代码",
 					"val": "EPA_NowCast.2204",
 					"type": "text",
 					"placeholder": "EPA_NowCast.2204",
@@ -118,7 +118,7 @@
 				},
 				{
 					"id": "@iRingo.Weather.Map.AQI",
-					"name": "[空气质量地图]修改开关",
+					"name": "[空气质量地图] 修改开关",
 					"val": false,
 					"type": "boolean",
 					"desc": "是否启用此功能修改，数据来源：WAQI"
@@ -126,7 +126,7 @@
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo/Weather",
-			"icons": ["https://developer.https://developer.apple.com/assets/elements/icons/weather/weather-128x128.png", "https://developer.https://developer.apple.com/assets/elements/icons/weather/weather-128x128.png"]
+			"icons": ["https://developer.apple.com/assets/elements/icons/weather/weather-128x128.png", "https://developer.apple.com/assets/elements/icons/weather/weather-128x128.png"]
 		},
 		{
 			"id": "iRingo.Location",
