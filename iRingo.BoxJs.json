@@ -9,172 +9,71 @@
 		{
 			"id": "iRingo.WeatherKit",
 			"name": "🌤 WeatherKit",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/Weather/weather-kit\">🌤 WeatherKit</a>的使用说明进行配置",
-				"填写完成后别忘点击此页面底端右下角的\"保存\"。"
-			],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/Weather/weather-kit\">🌤 WeatherKit</a>的使用说明进行配置", "填写完成后别忘点击此页面底端右下角的\"保存\"。"],
 			"keys": ["@iRingo.WeatherKit.Settings", "@iRingo.WeatherKit.Caches"],
 			"settings": [
 				{
 					"id": "@iRingo.WeatherKit.Settings.NextHour.Provider",
-					"name": "[未来一小时降水强度]数据源",
-					"val": "ColorfulClouds",
+					"name": "[未来一小时降水强度] 数据源",
 					"type": "selects",
-					"items": [
-						{
-							"key": "WeatherKit",
-							"label": "WeatherKit (不进行替换)"
-						},
-						{
-							"key": "ColorfulClouds",
-							"label": "彩云天气"
-						},
-						{
-							"key": "QWeather",
-							"label": "和风天气"
-						}
-					],
+					"val": "ColorfulClouds",
+					"items": [{ "key": "WeatherKit", "label": "WeatherKit (不进行替换)" }, { "key": "ColorfulClouds", "label": "彩云天气" }, { "key": "QWeather", "label": "和风天气" }],
 					"desc": "始终会使用选定的数据源，填补无降水监测地区的数据。"
 				},
 				{
 					"id": "@iRingo.WeatherKit.Settings.AQI.Provider",
-					"name": "[空气质量]数据源",
-					"val": "ColorfulClouds",
+					"name": "[空气质量] 数据源",
 					"type": "selects",
-					"items": [
-						{
-							"key": "WeatherKit",
-							"label": "WeatherKit (不进行替换)"
-						},
-						{
-							"key": "ColorfulClouds",
-							"label": "彩云天气"
-						},
-						{
-							"key": "QWeather",
-							"label": "和风天气"
-						},
-						{
-							"key": "WAQI",
-							"label": "The World Air Quality Project"
-						}
-					],
+					"val": "ColorfulClouds",
+					"items": [{ "key": "WeatherKit", "label": "WeatherKit (不进行替换)" }, { "key": "ColorfulClouds", "label": "彩云天气" }, { "key": "QWeather", "label": "和风天气" }, { "key": "WAQI", "label": "The World Air Quality Project" }],
 					"desc": "始终会使用选定的数据源，填补无空气质量监测地区的数据。"
 				},
 				{
 					"id": "@iRingo.WeatherKit.Settings.AQI.ReplaceProviders",
-					"name": "[空气质量]需要替换的供应商",
-					"val": [],
+					"name": "[空气质量] 需要替换的供应商",
 					"type": "checkboxes",
-					"desc": "选中的空气质量数据源会被替换。",
-					"items": [
-						{
-							"key": "QWeather",
-							"label": "和风天气"
-						},
-						{
-							"key": "BreezoMeter",
-							"label": "BreezoMeter"
-						},
-						{
-							"key": "TWC",
-							"label": "The Weather Channel"
-						}
-					]
+					"val": ["QWeather"],
+					"items": [{ "key": "QWeather", "label": "和风天气" }, { "key": "BreezoMeter", "label": "BreezoMeter" }, { "key": "TWC", "label": "The Weather Channel" }],
+					"desc": "选中的空气质量数据源会被替换。"
 				},
-				{
-					"id": "@iRingo.WeatherKit.Settings.AQI.Local.Scale",
-					"name": "[空气质量]本地替换算法",
-					"val": "WAQI_InstantCast",
-					"type": "selects",
-					"desc": "本地替换时使用的算法",
-					"items": [
-						{
-							"key": "NONE",
-							"label": "None (不进行替换)"
-						},
-						{
-							"key": "WAQI_InstantCast",
-							"label": "WAQI InstantCast"
-						}
-					]
-				},
+				{ "id": "@iRingo.WeatherKit.Settings.AQI.Local.Scale", "name": "[空气质量] 本地替换算法", "type": "selects", "val": "WAQI_InstantCast", "items": [{ "key": "NONE", "label": "None (不进行替换)" }, { "key": "WAQI_InstantCast", "label": "WAQI InstantCast" }], "desc": "本地替换时使用的算法" },
 				{
 					"id": "@iRingo.WeatherKit.Settings.AQI.Local.ReplaceScales",
-					"name": "[空气质量]需要修改的标准",
-					"val": ["HJ6332012"],
+					"name": "[空气质量] 需要修改的标准",
 					"type": "checkboxes",
-					"desc": "选中的空气质量标准会被替换。请注意各国监测的污染物种类可能有所不同，转换算法或API未必适合当地。",
-					"items": [
-						{
-							"key": "HJ6332012",
-							"label": "中国 (HJ 633—2012)"
-						}
-					]
+					"val": ["HJ6332012"],
+					"items": [{ "key": "HJ6332012", "label": "中国 (HJ 633—2012)" }],
+					"desc": "选中的空气质量标准会被替换。请注意各国监测的污染物种类可能有所不同，转换算法或API未必适合当地。"
 				},
-				{
-					"id": "@iRingo.WeatherKit.Settings.AQI.Local.ConvertUnits",
-					"name": "[空气质量]转换污染物计量单位",
-					"val": false,
-					"type": "boolean",
-					"desc": "（不推荐。不同单位互转可能会损失精度，导致数值偏大）将污染物数据替换为转换单位后的数据，方便对照转换后的标准。"
-				},
-				{
-					"id": "@iRingo.WeatherKit.Settings.API.ColorfulClouds.Token",
-					"name": "[API]彩云天气 API 令牌",
-					"val": "",
-					"type": "text",
-					"placeholder": "123456789123456789abcdefghijklmnopqrstuv",
-					"desc": "彩云天气 API 令牌"
-				},
+				{ "id": "@iRingo.WeatherKit.Settings.AQI.Local.ConvertUnits", "name": "[空气质量] 转换污染物计量单位", "type": "boolean", "val": false, "desc": "将污染物数据替换为转换单位后的数据，方便对照转换后的标准。（不推荐。不同单位互转可能会损失精度，导致数值偏大）" },
+				{ "id": "@iRingo.WeatherKit.Settings.API.ColorfulClouds.Token", "name": "[API] 彩云天气令牌", "type": "text", "val": "", "desc": "彩云天气 API 令牌", "placeholder": "123456789123456789abcdefghijklmnopqrstuv" },
 				{
 					"id": "@iRingo.WeatherKit.Settings.API.QWeather.Host",
-					"name": "[API]和风天气 API 主机",
-					"val": "devapi.qweather.com",
+					"name": "[API] 和风天气主机",
 					"type": "selects",
-					"desc": "和风天气 API 使用的主机名",
-					"items": [
-						{
-							"key": "devapi.qweather.com",
-							"label": "免费订阅 (devapi.qweather.com)"
-						},
-						{
-							"key": "api.qweather.com",
-							"label": "付费订阅 (api.qweather.com)"
-						}
-					]
+					"val": "devapi.qweather.com",
+					"items": [{ "key": "devapi.qweather.com", "label": "免费订阅 (devapi.qweather.com)" }, { "key": "api.qweather.com", "label": "付费订阅 (api.qweather.com)" }],
+					"desc": "和风天气 API 使用的主机名"
 				},
+				{ "id": "@iRingo.WeatherKit.Settings.API.QWeather.Token", "name": "[API] 和风天气令牌", "type": "text", "val": "", "desc": "和风天气 API 令牌", "placeholder": "123456789123456789abcdefghijklmnopqrstuv" },
+				{ "id": "@iRingo.WeatherKit.Settings.API.WAQI.Token", "name": "[API] WAQI 令牌", "type": "text", "val": "", "desc": "WAQI API 令牌，填写此字段将自动使用WAQI高级API", "placeholder": "123456789123456789abcdefghijklmnopqrstuv" },
 				{
-					"id": "@iRingo.WeatherKit.Settings.API.QWeather.Token",
-					"name": "[API]和风天气 API 令牌",
-					"val": "",
-					"type": "text",
-					"placeholder": "123456789123456789abcdefghijklmnopqrstuv",
-					"desc": "和风天气 API 令牌"
-				},
-				{
-					"id": "@iRingo.WeatherKit.Settings.API.WAQI.Token",
-					"name": "[API]WAQI API 令牌",
-					"val": "",
-					"type": "text",
-					"placeholder": "123456789123456789abcdefghijklmnopqrstuv",
-					"desc": "WAQI API 令牌，填写此字段将自动使用WAQI高级API"
+					"id": "@iRingo.WeatherKit.Settings.LogLevel",
+					"name": "[调试] 日志等级",
+					"type": "selects",
+					"val": "WARN",
+					"items": [{ "key": "OFF", "label": "关闭" }, { "key": "ERROR", "label": "❌ 错误" }, { "key": "WARN", "label": "⚠️ 警告" }, { "key": "INFO", "label": "ℹ️ 信息" }, { "key": "DEBUG", "label": "🅱️ 调试" }, { "key": "ALL", "label": "全部" }],
+					"desc": "选择脚本日志的输出等级，低于所选等级的日志将全部输出。"
 				}
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo/WeatherKit",
-			"icons": [
-				"https://developer.apple.com/assets/elements/icons/weatherkit/weatherkit-96x96_2x.png",
-				"https://developer.apple.com/assets/elements/icons/weatherkit/weatherkit-96x96_2x.png"
-			]
+			"icons": ["https://developer.apple.com/assets/elements/icons/weatherkit/weatherkit-128x128.png", "https://developer.apple.com/assets/elements/icons/weatherkit/weatherkit-128x128.png"]
 		},
 		{
 			"id": "iRingo.Location",
 			"name": "📍 定位",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/GeoServices/location\">📍 定位</a>的使用说明进行配置",
-				"影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"
-			],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/GeoServices/location\">📍 定位</a>的使用说明进行配置", "影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"],
 			"keys": ["@iRingo.Location.Settings", "@iRingo.Location.Caches"],
 			"settings": [
 				{
@@ -237,18 +136,12 @@
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo/GeoServices",
-			"icons": [
-				"https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios15-location-arrow-status-icon.png",
-				"https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios15-location-arrow-status-icon.png"
-			]
+			"icons": ["https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios15-location-arrow-status-icon.png", "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios15-location-arrow-status-icon.png"]
 		},
 		{
 			"id": "iRingo.Maps",
 			"name": "🗺️ 地图",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/GeoServices/maps\">🗺️ 地图</a>的使用说明进行配置",
-				"影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"
-			],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/GeoServices/maps\">🗺️ 地图</a>的使用说明进行配置", "影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"],
 			"keys": ["@iRingo.Maps.Settings", "@iRingo.Maps.Caches"],
 			"settings": [
 				{
@@ -462,18 +355,12 @@
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo/GeoServices",
-			"icons": [
-				"https://developer.apple.com/assets/elements/icons/maps/maps-128x128.png",
-				"https://developer.apple.com/assets/elements/icons/maps/maps-128x128.png"
-			]
+			"icons": ["https://developer.apple.com/assets/elements/icons/maps/maps-128x128.png", "https://developer.apple.com/assets/elements/icons/maps/maps-128x128.png"]
 		},
 		{
 			"id": "iRingo.Siri",
 			"name": "⭕ Siri",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/Siri/apple-intelligence-and-siri\">🟥 Apple智能与Siri</a>的使用说明进行配置",
-				"影响功能范围不包括「Siri 请求」和「Siri 建议」等"
-			],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/Siri/apple-intelligence-and-siri\">🟥 Apple智能与Siri</a>的使用说明进行配置", "影响功能范围不包括「Siri 请求」和「Siri 建议」等"],
 			"keys": ["@iRingo.Siri.Settings", "@iRingo.Siri.Caches"],
 			"settings": [
 				{
@@ -604,18 +491,12 @@
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo/Siri",
-			"icons": [
-				"https://developer.apple.com/assets/elements/icons/siri/siri-128x128.png",
-				"https://developer.apple.com/assets/elements/icons/siri/siri-128x128.png"
-			]
+			"icons": ["https://developer.apple.com/assets/elements/icons/siri/siri-128x128.png", "https://developer.apple.com/assets/elements/icons/siri/siri-128x128.png"]
 		},
 		{
 			"id": "iRingo.TV",
 			"name": "📺 TV",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/apple-tv\">📺 TV</a>的使用说明进行配置",
-				"自定义TV app的配置文件及各个栏目"
-			],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/apple-tv\">📺 TV</a>的使用说明进行配置", "自定义TV app的配置文件及各个栏目"],
 			"keys": ["@iRingo.TV.Settings", "@iRingo.TV.Caches"],
 			"settings": [
 				{
@@ -664,18 +545,7 @@
 				{
 					"id": "@iRingo.TV.Settings.Tabs",
 					"name": "启用的标签与栏目",
-					"val": [
-						"WatchNow",
-						"Originals",
-						"MLS",
-						"Sports",
-						"Kids",
-						"Store",
-						"Movies",
-						"TV",
-						"Library",
-						"Search"
-					],
+					"val": ["WatchNow", "Originals", "MLS", "Sports", "Kids", "Store", "Movies", "TV", "Library", "Search"],
 					"type": "checkboxes",
 					"desc": "启用的标签与栏目，未选择的标签与栏目入口将被隐藏，启用的入口由国家和地区决定，此选项仅代表功能入口上的开启，不代表对应地区一定有数据和服务",
 					"items": [
@@ -1466,18 +1336,12 @@
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo/TV",
-			"icons": [
-				"https://developer.apple.com/assets/elements/icons/apple-tv/apple-tv-128x128.png",
-				"https://developer.apple.com/assets/elements/icons/apple-tv/apple-tv-128x128.png"
-			]
+			"icons": ["https://developer.apple.com/assets/elements/icons/apple-tv/apple-tv-128x128.png", "https://developer.apple.com/assets/elements/icons/apple-tv/apple-tv-128x128.png"]
 		},
 		{
 			"id": "iRingo.News",
 			"name": "📰 News",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/apple-news\">📰 News</a>的使用说明进行配置",
-				"影响功能范围……等"
-			],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/apple-news\">📰 News</a>的使用说明进行配置", "影响功能范围……等"],
 			"keys": ["@iRingo.News.Settings", "@iRingo.News.Caches"],
 			"settings": [
 				{
@@ -1554,18 +1418,12 @@
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo/News",
-			"icons": [
-				"https://developer.apple.com/assets/elements/icons/news/news-128x128.png",
-				"https://developer.apple.com/assets/elements/icons/news/news-128x128.png"
-			]
+			"icons": ["https://developer.apple.com/assets/elements/icons/news/news-128x128.png", "https://developer.apple.com/assets/elements/icons/news/news-128x128.png"]
 		},
 		{
 			"id": "iRingo.TestFlight",
 			"name": "✈ TestFlight",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/test-flight\">✈️ TestFlight</a>的使用说明进行配置",
-				"影响功能范围……等"
-			],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/test-flight\">✈️ TestFlight</a>的使用说明进行配置", "影响功能范围……等"],
 			"keys": ["@iRingo.TestFlight.Settings", "@iRingo.TestFlight.Caches"],
 			"settings": [
 				{
@@ -1642,18 +1500,12 @@
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo/TestFlight",
-			"icons": [
-				"https://developer.apple.com/assets/elements/icons/testflight/testflight-128x128.png",
-				"https://developer.apple.com/assets/elements/icons/testflight/testflight-128x128.png"
-			]
+			"icons": ["https://developer.apple.com/assets/elements/icons/testflight/testflight-128x128.png", "https://developer.apple.com/assets/elements/icons/testflight/testflight-128x128.png"]
 		},
 		{
 			"id": "iRingo.Watch",
 			"name": "⌚️ WATCH",
-			"descs_html": [
-				"请参照<a href=\"https://NSRingo.github.io/guide/apple-watch\">⌚️ WATCH</a>的使用说明进行配置",
-				"影响功能范围WATCH上的“指南针”、“地图”、“News”等"
-			],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/apple-watch\">⌚️ WATCH</a>的使用说明进行配置", "影响功能范围WATCH上的“指南针”、“地图”、“News”等"],
 			"keys": ["@iRingo.Watch.Settings", "@iRingo.Watch.Caches"],
 			"settings": [
 				{
@@ -1737,10 +1589,7 @@
 			],
 			"author": "@VirgilClyne",
 			"repo": "https://github.com/NSRingo",
-			"icons": [
-				"https://developer.apple.com/assets/elements/icons/apple-watch-app/apple-watch-app-128x128.png",
-				"https://developer.apple.com/assets/elements/icons/apple-watch-app/apple-watch-app-128x128.png"
-			]
+			"icons": ["https://developer.apple.com/assets/elements/icons/apple-watch-app/apple-watch-app-128x128.png", "https://developer.apple.com/assets/elements/icons/apple-watch-app/apple-watch-app-128x128.png"]
 		}
 	]
 }
