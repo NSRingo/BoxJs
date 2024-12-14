@@ -547,13 +547,7 @@
 					],
 					"desc": "启用的「Siri 建议」功能，未选的功能不代表关闭，仅代表还原到该地区默认设置状态。"
 				},
-				{
-					"id": "@iRingo.Spotlight.Settings.SafariSmartHistory",
-					"name": "Safari 智能历史记录",
-					"type": "boolean",
-					"val": true,
-					"desc": "是否在 Safari 浏览器中启用基于历史记录的Siri建议功能，启用后将在Safari浏览器起始页推荐基于时间地点跨设备等的相关浏览记录。"
-				},
+				{ "id": "@iRingo.Spotlight.Settings.SafariSmartHistory", "name": "Safari 智能历史记录", "type": "boolean", "val": true, "desc": "是否在 Safari 浏览器中启用基于历史记录的Siri建议功能，启用后将在Safari浏览器起始页推荐基于时间地点跨设备等的相关浏览记录。" },
 				{
 					"id": "@iRingo.Spotlight.Settings.LogLevel",
 					"name": "[调试] 日志等级",
