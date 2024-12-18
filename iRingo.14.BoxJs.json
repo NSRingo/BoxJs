@@ -259,7 +259,7 @@
 		{
 			"id": "iRingo.Spotlight",
 			"name": "🔍 聚焦搜索",
-			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/Siri/siri-and-search\">⭕ Siri与搜索</a>的使用说明进行配置", "影响功能范围包括「Siri建议」「来自APPLE的内容」「来自APPLE的建议」等"],
+			"descs_html": ["请参照<a href=\"https://NSRingo.github.io/guide/Siri/spotlight\">🔍 聚焦搜索</a>的使用说明进行配置", "影响功能范围包括「Siri建议」「来自APPLE的内容」「来自APPLE的建议」等"],
 			"keys": ["@iRingo.Spotlight.Settings", "@iRingo.Spotlight.Caches"],
 			"settings": [
 				{
