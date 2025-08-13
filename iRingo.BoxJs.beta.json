@@ -13,11 +13,33 @@
 			"keys": ["@iRingo.WeatherKit.Settings", "@iRingo.WeatherKit.Caches"],
 			"settings": [
 				{
+					"id": "@iRingo.WeatherKit.Settings.DataSets",
+					"name": "[数据集] 需要包含的数据集",
+					"type": "checkboxes",
+					"val": ["airQuality", "currentWeather", "forecastDaily", "forecastHourly", "forecastNextHour", "news", "trendComparison", "weatherAlerts", "weatherChanges"],
+					"items": [
+						{ "key": "airQuality", "label": "空气质量" },
+						{ "key": "currentWeather", "label": "当前天气" },
+						{ "key": "forecastDaily", "label": "每日预报" },
+						{ "key": "forecastHourly", "label": "每小时预报" },
+						{ "key": "forecastNextHour", "label": "未来一小时降水强度" },
+						{ "key": "news", "label": "新闻" },
+						{ "key": "trendComparison", "label": "趋势对比" },
+						{ "key": "weatherAlerts", "label": "天气预警" },
+						{ "key": "weatherChanges", "label": "天气变化" }
+					],
+					"desc": "选中的数据集会被包含在请求中。"
+				},
+				{
 					"id": "@iRingo.WeatherKit.Settings.NextHour.Provider",
 					"name": "[未来一小时降水强度] 数据源",
 					"type": "selects",
 					"val": "ColorfulClouds",
-					"items": [{ "key": "WeatherKit", "label": "WeatherKit (不进行替换)" }, { "key": "ColorfulClouds", "label": "彩云天气" }, { "key": "QWeather", "label": "和风天气" }],
+					"items": [
+						{ "key": "WeatherKit", "label": "WeatherKit (不进行替换)" },
+						{ "key": "ColorfulClouds", "label": "彩云天气" },
+						{ "key": "QWeather", "label": "和风天气" }
+					],
 					"desc": "始终会使用选定的数据源，填补无降水监测地区的数据。"
 				},
 				{
@@ -25,7 +47,12 @@
 					"name": "[空气质量] 数据源",
 					"type": "selects",
 					"val": "ColorfulClouds",
-					"items": [{ "key": "WeatherKit", "label": "WeatherKit (不进行替换)" }, { "key": "ColorfulClouds", "label": "彩云天气" }, { "key": "QWeather", "label": "和风天气" }, { "key": "WAQI", "label": "The World Air Quality Project" }],
+					"items": [
+						{ "key": "WeatherKit", "label": "WeatherKit (不进行替换)" },
+						{ "key": "ColorfulClouds", "label": "彩云天气" },
+						{ "key": "QWeather", "label": "和风天气" },
+						{ "key": "WAQI", "label": "The World Air Quality Project" }
+					],
 					"desc": "始终会使用选定的数据源，填补无空气质量监测地区的数据。"
 				},
 				{
@@ -33,10 +60,24 @@
 					"name": "[空气质量] 需要替换的供应商",
 					"type": "checkboxes",
 					"val": ["QWeather"],
-					"items": [{ "key": "QWeather", "label": "和风天气" }, { "key": "BreezoMeter", "label": "BreezoMeter" }, { "key": "TWC", "label": "The Weather Channel" }],
+					"items": [
+						{ "key": "QWeather", "label": "和风天气" },
+						{ "key": "BreezoMeter", "label": "BreezoMeter" },
+						{ "key": "TWC", "label": "The Weather Channel" }
+					],
 					"desc": "选中的空气质量数据源会被替换。"
 				},
-				{ "id": "@iRingo.WeatherKit.Settings.AQI.Local.Scale", "name": "[空气质量] 本地替换算法", "type": "selects", "val": "WAQI_InstantCast", "items": [{ "key": "NONE", "label": "None (不进行替换)" }, { "key": "WAQI_InstantCast", "label": "WAQI InstantCast" }], "desc": "本地替换时使用的算法" },
+				{
+					"id": "@iRingo.WeatherKit.Settings.AQI.Local.Scale",
+					"name": "[空气质量] 本地替换算法",
+					"type": "selects",
+					"val": "WAQI_InstantCast",
+					"items": [
+						{ "key": "NONE", "label": "None (不进行替换)" },
+						{ "key": "WAQI_InstantCast", "label": "WAQI InstantCast" }
+					],
+					"desc": "本地替换时使用的算法"
+				},
 				{
 					"id": "@iRingo.WeatherKit.Settings.AQI.Local.ReplaceScales",
 					"name": "[空气质量] 需要修改的标准",
@@ -52,7 +93,10 @@
 					"name": "[API] 和风天气主机",
 					"type": "selects",
 					"val": "devapi.qweather.com",
-					"items": [{ "key": "devapi.qweather.com", "label": "免费订阅 (devapi.qweather.com)" }, { "key": "api.qweather.com", "label": "付费订阅 (api.qweather.com)" }],
+					"items": [
+						{ "key": "devapi.qweather.com", "label": "免费订阅 (devapi.qweather.com)" },
+						{ "key": "api.qweather.com", "label": "付费订阅 (api.qweather.com)" }
+					],
 					"desc": "和风天气 API 使用的主机名"
 				},
 				{ "id": "@iRingo.WeatherKit.Settings.API.QWeather.Token", "name": "[API] 和风天气令牌", "type": "text", "val": "", "desc": "和风天气 API 令牌", "placeholder": "123456789123456789abcdefghijklmnopqrstuv" },
@@ -62,7 +106,14 @@
 					"name": "[调试] 日志等级",
 					"type": "selects",
 					"val": "WARN",
-					"items": [{ "key": "OFF", "label": "关闭" }, { "key": "ERROR", "label": "❌ 错误" }, { "key": "WARN", "label": "⚠️ 警告" }, { "key": "INFO", "label": "ℹ️ 信息" }, { "key": "DEBUG", "label": "🅱️ 调试" }, { "key": "ALL", "label": "全部" }],
+					"items": [
+						{ "key": "OFF", "label": "关闭" },
+						{ "key": "ERROR", "label": "❌ 错误" },
+						{ "key": "WARN", "label": "⚠️ 警告" },
+						{ "key": "INFO", "label": "ℹ️ 信息" },
+						{ "key": "DEBUG", "label": "🅱️ 调试" },
+						{ "key": "ALL", "label": "全部" }
+					],
 					"desc": "选择脚本日志的输出等级，低于所选等级的日志将全部输出。"
 				}
 			],
