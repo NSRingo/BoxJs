@@ -243,6 +243,14 @@
 					"desc": "此选项影响地球视图下行政区划、地貌等信息的显示。"
 				},
 				{
+					"id": "@iRingo.Maps.Settings.TileSet.Roads",
+					"name": "[瓦片数据集] 道路图像与四处看看",
+					"type": "selects",
+					"val": "AUTO",
+					"items": [{ "key": "AUTO", "label": "🇺🇳自动（随[动态配置]版本自动选择）" }, { "key": "CN", "label": "🇨🇳中国（🇨🇳:卫星视图道路正确 | 🇺🇳:无四处看看）" }, { "key": "XX", "label": "Apple（🇨🇳:卫星视图道路偏移 | 🇺🇳:有四处看看）" }],
+					"desc": "此选项影响卫星视图下的道路图像与四处看看可用路段。"
+				},
+				{
 					"id": "@iRingo.Maps.Settings.TileSet.Satellite",
 					"name": "[瓦片数据集] 卫星图像",
 					"type": "selects",
