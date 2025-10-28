@@ -225,9 +225,9 @@
 					"id": "@iRingo.Maps.Settings.TileSet.Satellite",
 					"name": "[瓦片数据集] 卫星图像",
 					"type": "selects",
-					"val": "HYBRID",
-					"items": [{ "key": "AUTO", "label": "🇺🇳自动（随[动态配置]版本自动选择）" }, { "key": "HYBRID", "label": "混合（🇨🇳:2D较新 | 🇺🇳:主要城市3D）" }, { "key": "CN", "label": "🇨🇳中国四维（🇨🇳:2D较新 | 🇺🇳:🈚️）" }, { "key": "XX", "label": "🇺🇳DigitalGlobe（🇨🇳:2D较旧 | 🇺🇳:2D+主要城市3D）" }],
-					"desc": "此选项影响所列位图、影像与模型数据。"
+					"val": "CN",
+					"items": [{ "key": "AUTO", "label": "🇺🇳自动（随[动态配置]版本自动选择）" }, { "key": "CN", "label": "🇨🇳中国四维（仅🇨🇳）" }, { "key": "XX", "label": "🇺🇳DigitalGlobe（全球，但🇨🇳较旧）" }],
+					"desc": "此选项影响 2D 卫星图像的版本。"
 				},
 				{
 					"id": "@iRingo.Maps.Settings.LogLevel",
