@@ -14,10 +14,10 @@
 			"settings": [
 				{
 					"id": "@iRingo.WeatherKit.Settings.DataSets.Replace",
-					"name": "[数据集] 修改地区",
+					"name": "[数据集] 替换地区",
 					"type": "text",
 					"val": "CN|HK|MO|TW|IT|LT|MT|FR|SK|NO|BY|IS|CZ|SI|DE|ES|UA|DK|PL|FI|SE|HR|RU|RO|PT|EE|RS|AT|GR|HU|FJ|GU|MH|NC|TR|BH|SA|ID|IR|SG|OM|PH|IN|KH|CY|MY|VN|KW|TH|KR|KP|CA|BS|KY|MX|PA|MQ|CU|BM|PR|CW|GP|NI|BR|GF|CO|GY|PY|AR",
-					"desc": "正则表达式，只修改指定地区的数据集。"
+					"desc": "正则表达式，只替换指定地区的数据集。"
 				},
 				{
 					"id": "@iRingo.WeatherKit.Settings.DataSets.Value",
@@ -49,7 +49,7 @@
 				},
 				{ "id": "@iRingo.WeatherKit.Settings.NextHour.Provider", "name": "[未来一小时降水强度] 数据源", "type": "selects", "val": "ColorfulClouds", "items": [{ "key": "ColorfulClouds", "label": "彩云天气" }, { "key": "QWeather", "label": "和风天气" }], "desc": "使用选定的数据源填充未来一小时降水强度的数据。" },
 				{ "id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Fill", "name": "[空气质量 - 今日] 填补地区", "type": "text", "val": "CN|HK|MO", "desc": "正则表达式，只填补指定地区的今日空气质量数据。" },
-				{ "id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Pollutants.Provider", "name": "[今日污染物] 数据源", "type": "selects", "val": "ColorfulClouds", "items": [{ "key": "ColorfulClouds", "label": "彩云天气" }, { "key": "QWeather", "label": "和风天气" }], "desc": "使用选定的数据源填充污染物数据。" },
+				{ "id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Pollutants.Provider", "name": "[今日污染物] 数据源", "type": "selects", "val": "ColorfulClouds", "items": [{ "key": "ColorfulClouds", "label": "彩云天气" }, { "key": "QWeather", "label": "和风天气" }], "desc": "使用选定的数据源填补污染物数据。" },
 				{
 					"id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Pollutants.Units.Replace",
 					"name": "[今日污染物 - 单位转换] 替换目标",
@@ -80,7 +80,7 @@
 					"type": "checkboxes",
 					"val": ["HJ6332012"],
 					"items": [
-						{ "key": "HJ6332012", "label": "中国 (HJ6332012)" },
+						{ "key": "HJ6332012", "label": "中国AQI（HJ6332012）" },
 						{ "key": "IE.AQIH", "label": "爱尔兰AQIH（IE.AQIH）" },
 						{ "key": "AT.AQI", "label": "奥地利AQI（AT.AQI）" },
 						{ "key": "BE.BelAQI", "label": "比利时BelAQI（BE.BelAQI）" },
@@ -105,9 +105,9 @@
 					"id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Index.Provider",
 					"name": "[今日空气指数] 数据源",
 					"type": "selects",
-					"val": "iRingo",
-					"items": [{ "key": "iRingo", "label": "iRingo内置算法" }, { "key": "ColorfulCloudsUS", "label": "彩云天气（美标，18年9月版）" }, { "key": "ColorfulCloudsCN", "label": "彩云天气（国标）" }, { "key": "QWeather", "label": "和风天气（国标）" }, { "key": "WAQI", "label": "WAQI（美标InstantCast，18年9月版）" }],
-					"desc": "使用选定的数据源填充空气质量指数数据。"
+					"val": "Calculate",
+					"items": [{ "key": "Calculate", "label": "iRingo内置算法" }, { "key": "ColorfulCloudsUS", "label": "彩云天气（美标，18年9月版）" }, { "key": "ColorfulCloudsCN", "label": "彩云天气（国标）" }, { "key": "QWeather", "label": "和风天气（国标）" }, { "key": "WAQI", "label": "WAQI（美标InstantCast，18年9月版）" }],
+					"desc": "使用选定的数据源填补和替换空气质量指数。"
 				},
 				{ "id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Index.ForceCNPrimaryPollutants", "name": "[今日空气指数] 强制主要污染物", "type": "boolean", "val": true, "desc": "忽略国标（HJ 633—2012）的AQI > 50规定，始终将IAQI最大的空气污染物作为主要污染物。" },
 				{ "id": "@iRingo.WeatherKit.Settings.AirQuality.Comparison.Fill", "name": "[空气质量 - 对比昨日] 填补地区", "type": "text", "val": "CN|HK|MO", "desc": "正则表达式，只填补指定地区的对比昨日数据。" },
@@ -118,11 +118,11 @@
 					"name": "[昨日空气指数] 数据源",
 					"type": "selects",
 					"val": "ColorfulCloudsUS",
-					"items": [{ "key": "iRingo", "label": "iRingo内置算法" }, { "key": "ColorfulCloudsUS", "label": "彩云天气（美标，18年9月版）" }, { "key": "ColorfulCloudsCN", "label": "彩云天气（国标）" }, { "key": "QWeather", "label": "和风天气（国标）" }],
+					"items": [{ "key": "Calculate", "label": "iRingo内置算法" }, { "key": "ColorfulCloudsUS", "label": "彩云天气（美标，18年9月版）" }, { "key": "ColorfulCloudsCN", "label": "彩云天气（国标，12年2月版）" }, { "key": "QWeather", "label": "和风天气（国标，12年2月版）" }],
 					"desc": "用来和今日空气质量指数对比的数据。"
 				},
 				{
-					"id": "@iRingo.WeatherKit.Settings.AirQuality.iRingo.Algorithm",
+					"id": "@iRingo.WeatherKit.Settings.AirQuality.Calculate.Algorithm",
 					"name": "[iRingo内置算法] 算法",
 					"type": "selects",
 					"val": "UBA",
@@ -133,9 +133,9 @@
 						{ "key": "WAQI_InstantCast_CN", "label": "国标InstantCast（HJ 633—2012）" },
 						{ "key": "WAQI_InstantCast_CN_25_DRAFT", "label": "国标InstantCast（HJ 633 2025年草案）" }
 					],
-					"desc": "使用内置算法，通过污染物数据本地计算空气指数。InstantCast源自于WAQI。"
+					"desc": "使用内置算法，通过污染物数据本地计算空气指数。InstantCast源自于WAQI，美标版本使用了WAQI的臭氧标准。"
 				},
-				{ "id": "@iRingo.WeatherKit.Settings.AirQuality.iRingo.AllowOverRange", "name": "[iRingo内置算法] 允许指数超标", "type": "boolean", "val": true, "desc": "允许美标和国标的指数超过500。超过500时，指示颜色的小圆点会消失。" },
+				{ "id": "@iRingo.WeatherKit.Settings.AirQuality.Calculate.AllowOverRange", "name": "[iRingo内置算法] 允许指数超标", "type": "boolean", "val": true, "desc": "允许美标和国标的指数超过500。超过500时，指示颜色的小圆点会消失。" },
 				{ "id": "@iRingo.WeatherKit.Settings.API.ColorfulClouds.Token", "name": "[API] 彩云天气令牌", "type": "text", "val": "", "desc": "彩云天气 API 令牌", "placeholder": "123456789123456789abcdefghijklmnopqrstuv" },
 				{ "id": "@iRingo.WeatherKit.Settings.API.QWeather.Host", "name": "[API] 和风天气主机", "type": "text", "val": "devapi.qweather.com", "desc": "和风天气 API 使用的主机名", "placeholder": "devapi.qweather.com" },
 				{ "id": "@iRingo.WeatherKit.Settings.API.QWeather.Token", "name": "[API] 和风天气令牌", "type": "text", "val": "", "desc": "和风天气 API 令牌", "placeholder": "123456789123456789abcdefghijklmnopqrstuv" },
