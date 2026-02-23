@@ -22,13 +22,6 @@
 					"desc": "使用选定的数据源替换天气数据。"
 				},
 				{
-					"id": "@iRingo.WeatherKit.Settings.NextHour.Fill",
-					"name": "[未来一小时降水强度] 添加范围",
-					"type": "text",
-					"val": "CN|HK|MO|TW|IT|LT|MT|FR|SK|NO|BY|IS|CZ|SI|DE|ES|UA|DK|PL|FI|SE|HR|RU|RO|PT|EE|RS|AT|GR|HU|FJ|GU|MH|NC|TR|BH|SA|ID|IR|SG|OM|PH|IN|KH|CY|MY|VN|KW|TH|KR|KP|CA|BS|KY|MX|PA|MQ|CU|BM|PR|CW|GP|NI|BR|GF|CO|GY|PY|AR",
-					"desc": "正则表达式，只填补指定地区的未来一小时降水强度。"
-				},
-				{
 					"id": "@iRingo.WeatherKit.Settings.NextHour.Provider",
 					"name": "[未来一小时降水强度] 数据源",
 					"type": "selects",
@@ -36,7 +29,6 @@
 					"items": [{ "key": "WeatherKit", "label": "WeatherKit（不添加）" }, { "key": "ColorfulClouds", "label": "彩云天气" }, { "key": "QWeather", "label": "和风天气" }],
 					"desc": "使用选定的数据源填充未来一小时降水强度的数据。"
 				},
-				{ "id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Fill", "name": "[空气质量 - 今日] 填补地区", "type": "text", "val": "CN|HK|MO", "desc": "正则表达式，只填补指定地区的今日空气质量数据。" },
 				{ "id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Pollutants.Provider", "name": "[今日污染物] 数据源", "type": "selects", "val": "ColorfulClouds", "items": [{ "key": "ColorfulClouds", "label": "彩云天气" }, { "key": "QWeather", "label": "和风天气" }], "desc": "使用选定的数据源填补污染物数据。" },
 				{
 					"id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Pollutants.Units.Replace",
