@@ -29,7 +29,7 @@
 						{ "key": "weatherAlerts", "label": "天气预警" },
 						{ "key": "weatherChanges", "label": "天气变化" }
 					],
-					"desc": "选中的数据集会被包含在请求中。"
+					"desc": "选择允许插件处理的数据集；未选中的可配置数据集会从请求中移除，其他 Apple 数据集保持不变。"
 				},
 				{ "id": "@iRingo.WeatherKit.Settings.Weather.Replace", "name": "[天气] 替换范围", "type": "text", "val": "CN", "desc": "正则表达式，只替换指定地区的天气。" },
 				{
@@ -117,7 +117,6 @@
 					"desc": "使用选定的数据源填补和替换空气质量指数。"
 				},
 				{ "id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Index.ForceCNPrimaryPollutants", "name": "[今日空气指数] 强制主要污染物", "type": "boolean", "val": true, "desc": "忽略国标（HJ 633—2012）的AQI > 50规定，始终将IAQI最大的空气污染物作为主要污染物。" },
-				{ "id": "@iRingo.WeatherKit.Settings.AirQuality.Comparison.Fill", "name": "[空气质量 - 对比昨日] 填补地区", "type": "text", "val": "CN|HK|MO", "desc": "正则表达式，只填补指定地区的对比昨日数据。" },
 				{ "id": "@iRingo.WeatherKit.Settings.AirQuality.Comparison.ReplaceWhenCurrentChange", "name": "[空气质量 - 对比昨日] 变化时替换", "type": "boolean", "val": false, "desc": "即使已有对比昨日数据，当今日空气质量指数发生变化时，替换对比昨日数据。" },
 				{ "id": "@iRingo.WeatherKit.Settings.AirQuality.Comparison.Yesterday.PollutantsProvider", "name": "[昨日污染物] 数据源", "type": "selects", "val": "QWeather", "items": [{ "key": "QWeather", "label": "和风天气" }], "desc": "为iRingo内置算法提供污染物数据，计算出昨日的空气质量指数。" },
 				{
@@ -139,7 +138,13 @@
 						{ "key": "EU_EAQI", "label": "欧盟EAQI（ETC HE Report 2024/17）" },
 						{ "key": "WAQI_InstantCast_US", "label": "美标InstantCast（EPA-454/B-24-002）" },
 						{ "key": "WAQI_InstantCast_CN", "label": "国标InstantCast（HJ 633—2012）" },
-						{ "key": "WAQI_InstantCast_CN_25_DRAFT", "label": "国标InstantCast（HJ 633 2025年草案）" }
+						{ "key": "WAQI_InstantCast_CN_25_DRAFT", "label": "国标InstantCast（HJ 633 2025年草案）" },
+						{ "key": "CA_AQHI", "label": "加拿大AQHI（10.17269/s41997-019-00237-w）" },
+						{ "key": "HK_AQHI", "label": "香港AQHI" },
+						{ "key": "AQHI_Multi_CN", "label": "AQHI-Multi（中国）" },
+						{ "key": "AQHI_Multi_CN_HK", "label": "AQHI-Multi（中国+香港）" },
+						{ "key": "CN_DEATH_AQHI", "label": "中国（致死风险）AQHI" },
+						{ "key": "CN_DEATH_HK_AQHI", "label": "中国（致死风险）+香港AQHI" }
 					],
 					"desc": "使用内置算法，通过污染物数据本地计算空气指数。InstantCast源自于WAQI，美标版本使用了WAQI的臭氧标准。"
 				},
