@@ -881,7 +881,7 @@
 				{
 					"id": "@iRingo.Watch.Settings.UrlInfoSet.LocationShift",
 					"name": "[URL信息集] 定位漂移",
-					"val": "Apple",
+					"val": "AUTO",
 					"type": "selects",
 					"items": [{ "key": "AUTO", "label": "🇺🇳自动（随[动态配置]版本自动选择）" }, { "key": "AutoNavi", "label": "🧭高德（🈚️坐标，使用🇨🇳GCJ-02坐标）" }, { "key": "Apple", "label": "Apple（🈶️坐标，使用🇺🇳WGS-84坐标）" }],
 					"desc": "定位漂移修正服务接口，控制定位漂移和🧭指南针与📍坐标的经纬度。"
